@@ -20,10 +20,16 @@ function spell.onCastSpell(creature, var)
 	return combat:execute(creature, var)
 end
 
-spell:name("Magic Shield")
-spell:words("utamo vita")
+spell:name("Escudo Magico")
+spell:words("Munio vivare")
 spell:group("support")
-spell:vocation("druid;true", "elder druid;true", "sorcerer;true", "master sorcerer;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de mago do fogo",
+	"aprendiz de mago da agua",
+	"aprendiz de mago da terra",
+	"aprendiz de mago do ar"
+)
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_MAGIC_SHIELD)
 spell:id(44)
 spell:cooldown(14 * 1000)

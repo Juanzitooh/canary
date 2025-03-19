@@ -69,13 +69,16 @@ end
 spell:group("support", "crippling")
 spell:id(244)
 spell:name("Sap Strength")
-spell:words("exori kor")
+spell:words("impulsus exhurio")
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_SAP_STRENGTH)
 spell:level(275)
 spell:mana(300)
 spell:isSelfTarget(true)
 spell:cooldown(12 * 1000)
 spell:groupCooldown(2 * 1000, 12 * 1000)
-spell:vocation("sorcerer;true", "master sorcerer;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de mago da terra"
+)
 spell:needLearn(false)
 spell:register()

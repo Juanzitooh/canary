@@ -19,8 +19,8 @@ end
 
 spell:group("attack")
 spell:id(169)
-spell:name("Apprentice's Strike")
-spell:words("exori min flam")
+spell:name("bola de fogo")
+spell:words("impulsus modicus ignis")
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_OR_RUNE)
 spell:impactSound(SOUND_EFFECT_TYPE_SPELL_FLAME_STRIKE)
 spell:level(8)
@@ -32,5 +32,8 @@ spell:blockWalls(true)
 spell:cooldown(2 * 1000)
 spell:groupCooldown(2 * 1000)
 spell:needLearn(false)
-spell:vocation("druid;true", "elder druid;true", "sorcerer;true", "master sorcerer;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de mago do fogo"
+)
 spell:register()

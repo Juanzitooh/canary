@@ -20,8 +20,8 @@ end
 
 spell:group("healing")
 spell:id(241)
-spell:name("Restoration")
-spell:words("exura max vita")
+spell:name("Restaurar")
+spell:words("sanvia extremus vivare")
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_RESTORATION)
 spell:level(300)
 spell:mana(260)
@@ -30,5 +30,9 @@ spell:cooldown(6 * 1000)
 spell:groupCooldown(1 * 1000)
 spell:isAggressive(false)
 spell:needLearn(false)
-spell:vocation("druid;true", "sorcerer;true", "elder druid;true", "master sorcerer;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de mago da agua",
+	"aprendiz de mago do ar"
+)
 spell:register()

@@ -35,7 +35,7 @@ local function createCombat(area, combatFunc)
 end
 
 local combat = createCombat(AREA_CIRCLE3X3, "onTargetCreature")
-local combatWOD = createCombat(AREA_CIRCLE3X4, "onTargetCreatureWOD")
+local combatWOD = createCombat(AREA_CIRCLE5X5, "onTargetCreatureWOD")
 
 local spell = Spell("instant")
 
@@ -49,16 +49,16 @@ function spell.onCastSpell(creature, var)
 	return combat:execute(creature, var)
 end
 
-spell:name("Mass Healing")
-spell:words("exura gran mas res")
+spell:name("Cura Massiva ao grupo")
+spell:words("sanvia magnus totalis")
 spell:group("healing")
-spell:vocation("druid;true", "elder druid;true")
+spell:vocation("aprendiz de mago da agua")
 spell:id(82)
 spell:cooldown(2 * 1000)
 spell:groupCooldown(1 * 1000)
 spell:level(36)
 spell:mana(150)
-spell:isPremium(true)
+spell:isPremium(false)
 spell:isAggressive(false)
 spell:needLearn(false)
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_MASS_HEALING)

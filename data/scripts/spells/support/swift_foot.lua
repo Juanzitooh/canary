@@ -53,18 +53,23 @@ function spell.onCastSpell(creature, var)
 	return false
 end
 
-spell:name("Swift Foot")
-spell:words("utamo tempo san")
+spell:name("Velocidade Arcana")
+spell:words("munio tempora alatus")
 spell:group("support", "focus")
-spell:vocation("paladin;true", "royal paladin;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de arqueiro da agua",
+	"aprendiz de arqueiro da terra",
+	"aprendiz de arqueiro do ar"
+)
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_SWIFT_FOOT)
 spell:id(134)
 spell:cooldown(10 * 1000)
 spell:groupCooldown(2 * 1000, 10 * 1000)
-spell:level(55)
+spell:level(80)
 spell:mana(400)
 spell:isSelfTarget(true)
 spell:isAggressive(false)
-spell:isPremium(true)
+spell:isPremium(false)
 spell:needLearn(false)
 spell:register()

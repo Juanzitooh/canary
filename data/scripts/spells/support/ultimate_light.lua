@@ -14,10 +14,16 @@ function spell.onCastSpell(creature, var)
 	return combat:execute(creature, var)
 end
 
-spell:name("Ultimate Light")
-spell:words("utevo vis lux")
+spell:name("Iluminacao das Chamas")
+spell:words("videre ignis lumen")
 spell:group("support")
-spell:vocation("druid;true", "elder druid;true", "sorcerer;true", "master sorcerer;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de mago do fogo",
+	"aprendiz de mago da agua",
+	"aprendiz de mago da terra",
+	"aprendiz de mago do ar"
+)
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_ULTIMATE_LIGHT)
 spell:id(75)
 spell:cooldown(2 * 1000)
@@ -26,6 +32,6 @@ spell:level(26)
 spell:mana(140)
 spell:isSelfTarget(true)
 spell:isAggressive(false)
-spell:isPremium(true)
+spell:isPremium(false)
 spell:needLearn(false)
 spell:register()

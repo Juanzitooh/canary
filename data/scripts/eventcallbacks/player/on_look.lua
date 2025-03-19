@@ -27,18 +27,18 @@ local function handleItemDescription(inspectedThing, lookDistance, player)
 
 	if not player:getGroup():getAccess() then
 		if inspectedThing:getId() == ITEM_MAGICWALL or inspectedThing:getId() == ITEM_MAGICWALL_SAFE then
-			return "You see a magic wall."
+			return "Olhando a magic wall."
 		elseif inspectedThing:getId() == ITEM_WILDGROWTH or inspectedThing:getId() == ITEM_WILDGROWTH_SAFE then
-			return "You see rush wood."
+			return "Olhando rush wood."
 		end
 	end
 	if isSpecialItem(inspectedThing.itemid) then
 		local itemCharges = inspectedThing:getCharges()
 		if itemCharges > 0 then
-			return string.format("You see %s\nIt has %d refillings left.", descriptionText, itemCharges)
+			return string.format("Olhando %s\nIt has %d refillings left.", descriptionText, itemCharges)
 		end
 	else
-		return "You see " .. descriptionText
+		return "Olhando " .. descriptionText
 	end
 
 	return descriptionText
@@ -55,7 +55,7 @@ local function handleCreatureDescription(inspectedThing, lookDistance)
 		end
 	end
 
-	return "You see " .. descriptionText
+	return "Olhando " .. descriptionText
 end
 
 local function appendAdminDetails(descriptionText, inspectedThing, inspectedPosition)
@@ -70,11 +70,6 @@ local function appendAdminDetails(descriptionText, inspectedThing, inspectedPosi
 		local itemUniqueId = inspectedThing:getUniqueId()
 		if itemUniqueId > 0 and itemUniqueId < 65536 then
 			descriptionText = string.format("%s, Unique ID: %d", descriptionText, itemUniqueId)
-		end
-
-		local doorIdAttribute = inspectedThing:getAttribute(ITEM_ATTRIBUTE_DOORID)
-		if doorIdAttribute and doorIdAttribute > 0 then
-			descriptionText = string.format("%s, Door ID: %d", descriptionText, doorIdAttribute)
 		end
 
 		local itemType = inspectedThing:getType()

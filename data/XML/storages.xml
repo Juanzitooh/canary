@@ -31,3 +31,76 @@ When adding a new range or storage, make sure that the ranges do not overlap, an
 		<storage name="wheel.scroll.advanced" key="5" />
 	</range>
 </storages>
+
+<storages>
+	<!-- Reservando o range 2.000.000 - 2.100.000 para informações do personagem na lore elemental -->
+	<range start="2000000" end="2100000">
+		<!-- Dados Player -->
+		<storage name="raca" key="1" />
+		<storage name="forma.elemental" key="2" />
+		<storage name="tempo.elemental" key="3" />
+		<storage name="ferramenta.inicial" key="4" />
+		<storage name="set.inicial" key="5" />
+		<storage name="licenca.comercial" key="6" />
+		<storage name="permissao.viajem" key="7" />
+		<storage name="tempo.trabalho" key="8" />
+
+		<!-- Durabilidade Ferramentas -->
+		<storage name="machete" key="10000" />
+		<storage name="vara.pescar" key="10001" />
+		<storage name="picareta" key="10002" />
+		<storage name="foice" key="10003" />
+	</range>
+</storages>
+
+<storages>
+	<!-- Reservando o range 2.100.000 - 2.200.000 para a árvores de quests principais -->
+	<range start="2100000" end="2200000">
+		<!-- Arvore 1: Quests Iniciais até o level 200 -->
+
+		<!-- Tutorial: Aceitando o Chamado em Ominis -->
+		<storage name="chamado.inicio" key="1" />
+		<storage name="chamado.profissao.comum" key="2" />
+		<storage name="chamado.elemental" key="3" />
+		<storage name="chamado.profissao.especializada" key="4" />
+
+		<!-- Quests Gerais de Estudo -->
+
+		<!-- Caminho do Guerreiro -->
+		<storage name="caminho.guerreiro.fogo" key="100" />
+		<storage name="caminho.guerreiro.agua" key="101" />
+		<storage name="caminho.guerreiro.terra" key="102" />
+		<storage name="caminho.guerreiro.ar" key="103" />
+
+		<!-- Caminho do Arqueiro -->
+		<storage name="caminho.arqueiro.fogo" key="104" />
+		<storage name="caminho.arqueiro.agua" key="105" />
+		<storage name="caminho.arqueiro.terra" key="106" />
+		<storage name="caminho.arqueiro.ar" key="107" />
+
+		<!-- Caminho do Mago -->
+		<storage name="caminho.mago.fogo" key="108" />
+		<storage name="caminho.mago.agua" key="109" />
+		<storage name="caminho.mago.terra" key="110" />
+		<storage name="caminho.mago.ar" key="111" />
+
+		<!-- profissões -->
+		<storage name="estudo.coleta" key="200" />
+		<storage name="estudo.pesca" key="201" />
+		<storage name="estudo.mineracao" key="202" />
+		<storage name="estudo.culinaria" key="203" />
+		<storage name="estudo.forja" key="204" />
+		<storage name="estudo.artesanato" key="205" />
+		<storage name="estudo.alquimia" key="206" />
+		<storage name="estudo.joalheria" key="207" />
+		
+		<!-- Arvore 2: O Heroi Elemental (do level 200 até se tornar um herói elemental) -->
+		<storage name="Mestre.Artes.Combate.classicas" key="300" />
+		<storage name="Condutor.Elementos.comuns" key="301" />
+		<storage name="Heroi" key="302" />
+
+		<!-- Variaveis de missões -->
+		<storage name="moedas.ouro.tadeu" key="50000" />
+
+	</range>
+</storages>

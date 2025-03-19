@@ -19,18 +19,21 @@ end
 
 spell:group("attack", "ultimatestrikes")
 spell:id(154)
-spell:name("Ultimate Flame Strike")
-spell:words("exori max flam")
+spell:name("Explosao Catastrofica")
+spell:words("impulsus extremus ignis")
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_OR_RUNE)
 spell:impactSound(SOUND_EFFECT_TYPE_SPELL_ULTIMATE_FLAME_STRIKE)
 spell:level(90)
 spell:mana(100)
-spell:isPremium(true)
+spell:isPremium(false)
 spell:range(3)
 spell:needCasterTargetOrDirection(true)
 spell:blockWalls(true)
 spell:cooldown(30 * 1000)
 spell:groupCooldown(2 * 1000, 30 * 1000)
 spell:needLearn(false)
-spell:vocation("sorcerer;true", "master sorcerer;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de mago do fogo"
+)
 spell:register()

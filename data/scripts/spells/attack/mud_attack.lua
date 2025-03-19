@@ -19,8 +19,8 @@ end
 
 spell:group("attack")
 spell:id(174)
-spell:name("Mud Attack")
-spell:words("exori infir tera")
+spell:name("Pequeno Tremor")
+spell:words("impulsus modicus tera")
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_OR_RUNE)
 spell:impactSound(SOUND_EFFECT_TYPE_SPELL_MUD_ATTACK)
 spell:level(1)
@@ -33,5 +33,11 @@ spell:blockWalls(true)
 spell:cooldown(2 * 1000)
 spell:groupCooldown(2 * 1000)
 spell:needLearn(false)
-spell:vocation("druid;true", "elder druid;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de mago do fogo",
+	"aprendiz de mago da agua",
+	"aprendiz de mago da terra",
+	"aprendiz de mago do ar"
+)
 spell:register()

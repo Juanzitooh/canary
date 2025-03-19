@@ -18,15 +18,20 @@ function spell.onCastSpell(creature, variant)
 	return combat:execute(creature, variant)
 end
 
-spell:name("Light Healing")
-spell:words("exura")
+spell:name("Cura Natural")
+spell:words("sanvia")
 spell:group("healing")
-spell:vocation("druid;true", "elder druid;true", "paladin;true", "royal paladin;true", "sorcerer;true", "master sorcerer;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de guerreiro da terra",
+	"aprendiz de arqueiro da terra",
+	"aprendiz de mago da terra"
+)
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_LIGHT_HEALING)
 spell:id(1)
 spell:cooldown(1000)
 spell:groupCooldown(1000)
-spell:level(8)
+spell:level(10)
 spell:mana(20)
 spell:isSelfTarget(true)
 spell:isAggressive(false)

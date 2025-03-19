@@ -17,13 +17,14 @@ end
 
 spell:group("attack")
 spell:id(167)
-spell:name("Practise Fire Wave")
-spell:words("exevo dis flam hur")
+spell:vocation(
+	"aprendiz de mago do fogo"
+)
+spell:words("impulsus modicus ignis fluctus")
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_PRACTISE_FIRE_WAVE)
 spell:level(1)
 spell:mana(5)
 spell:needDirection(true)
 spell:cooldown(4 * 1000)
 spell:groupCooldown(2 * 1000)
-spell:vocation("none")
 spell:register()

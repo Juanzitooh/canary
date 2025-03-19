@@ -140,7 +140,7 @@ local hints = {
                automatically if the location is reachable and not too far away.",
 	[3] = "To open or close skills, battle or VIP list, click on the corresponding button to the right.",
 	[4] = "'Capacity' restricts the amount of things you can carry with you. It raises with each level.",
-	[5] = "Always have a look on your health bar. If you see that you do not regenerate \z
+	[5] = "Always have a look on your health bar. If Olhando that you do not regenerate \z
                health points anymore, eat something.",
 	[6] = "Always eat as much food as possible. This way, you'll regenerate health points for a longer period of time.",
 	[7] = "After you have killed a monster, you have 10 seconds in which the corpse \z

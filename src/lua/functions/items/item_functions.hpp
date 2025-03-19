@@ -89,5 +89,4 @@ private:
 	static int luaItemIsOwner(lua_State* L);
 	static int luaItemGetOwnerName(lua_State* L);
 	static int luaItemHasOwner(lua_State* L);
-	static int luaItemActor(lua_State* L);
 };

@@ -21,18 +21,53 @@ function spell.onCastSpell(creature, var)
 	return true
 end
 
-spell:name("Magic Rope")
-spell:words("exani tera")
+spell:name("Pedra Magica")
+spell:words("celeris petra")
 spell:group("support")
-spell:vocation("druid;true", "elder druid;true", "knight;true", "elite knight;true", "paladin;true", "royal paladin;true", "sorcerer;true", "master sorcerer;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de guerreiro do fogo",
+	"aprendiz de guerreiro da agua",
+	"aprendiz de guerreiro da terra",
+	"aprendiz de guerreiro do ar",
+	"aprendiz de arqueiro do fogo",
+	"aprendiz de arqueiro da agua",
+	"aprendiz de arqueiro da terra",
+	"aprendiz de arqueiro do ar",
+	"aprendiz de mago do fogo",
+	"aprendiz de mago da agua",
+	"aprendiz de mago da terra",
+	"aprendiz de mago do ar",
+	"ser humano",
+	"coletor",
+	"minerador",
+	"pescador",
+	"cozinheiro",
+	"ferreiro do fogo",
+	"ferreiro da agua",
+	"ferreiro da terra",
+	"ferreiro do ar",
+	"artesao do fogo",
+	"artesao da agua",
+	"artesao da terra",
+	"artesao do ar",
+	"joalheiro do fogo",
+	"joalheiro da agua",
+	"joalheiro da terra",
+	"joalheiro do ar",
+	"alquimista do fogo",
+	"alquimista da agua",
+	"alquimista da terra",
+	"alquimista do ar"
+)
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_MAGIC_ROPE)
 spell:id(76)
 spell:cooldown(2 * 1000)
 spell:groupCooldown(2 * 1000)
-spell:level(9)
+spell:level(5)
 spell:mana(20)
 spell:isSelfTarget(true)
 spell:isAggressive(false)
-spell:isPremium(true)
+spell:isPremium(false)
 spell:needLearn(false)
 spell:register()

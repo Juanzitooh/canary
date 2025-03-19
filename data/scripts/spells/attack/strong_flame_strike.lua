@@ -19,18 +19,21 @@ end
 
 spell:group("attack", "special")
 spell:id(150)
-spell:name("Strong Flame Strike")
-spell:words("exori gran flam")
+spell:name("Raio Flamejante")
+spell:words("impulsus magnus ignis")
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_OR_RUNE)
 spell:impactSound(SOUND_EFFECT_TYPE_SPELL_STRONG_FLAME_STRIKE)
 spell:level(70)
 spell:mana(60)
-spell:isPremium(true)
+spell:isPremium(false)
 spell:range(3)
 spell:needCasterTargetOrDirection(true)
 spell:blockWalls(true)
 spell:cooldown(8 * 1000)
 spell:groupCooldown(2 * 1000, 8 * 1000)
 spell:needLearn(false)
-spell:vocation("sorcerer;true", "master sorcerer;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de mago do fogo"
+)
 spell:register()

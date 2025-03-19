@@ -18,10 +18,45 @@ function spell.onCastSpell(creature, variant)
 	return combat:execute(creature, variant)
 end
 
-spell:name("Magic Patch")
-spell:words("exura infir")
+spell:name("Limpar Ferimentos")
+spell:words("sanvia aqua modicus")
 spell:group("healing")
-spell:vocation("druid;true", "elder druid;true", "paladin;true", "royal paladin;true", "sorcerer;true", "master sorcerer;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de guerreiro do fogo",
+	"aprendiz de guerreiro da agua",
+	"aprendiz de guerreiro da terra",
+	"aprendiz de guerreiro do ar",
+	"aprendiz de arqueiro do fogo",
+	"aprendiz de arqueiro da agua",
+	"aprendiz de arqueiro da terra",
+	"aprendiz de arqueiro do ar",
+	"aprendiz de mago do fogo",
+	"aprendiz de mago da agua",
+	"aprendiz de mago da terra",
+	"aprendiz de mago do ar",
+	"ser humano",
+	"coletor",
+	"minerador",
+	"pescador",
+	"cozinheiro",
+	"ferreiro do fogo",
+	"ferreiro da agua",
+	"ferreiro da terra",
+	"ferreiro do ar",
+	"artesao do fogo",
+	"artesao da agua",
+	"artesao da terra",
+	"artesao do ar",
+	"joalheiro do fogo",
+	"joalheiro da agua",
+	"joalheiro da terra",
+	"joalheiro do ar",
+	"alquimista do fogo",
+	"alquimista da agua",
+	"alquimista da terra",
+	"alquimista do ar"
+)
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_MAGIC_PATCH)
 spell:id(174)
 spell:cooldown(1 * 1000)

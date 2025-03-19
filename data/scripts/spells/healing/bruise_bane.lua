@@ -5,8 +5,8 @@ combat:setParameter(COMBAT_PARAM_DISPEL, CONDITION_PARALYZE)
 combat:setParameter(COMBAT_PARAM_AGGRESSIVE, false)
 
 function onGetFormulaValues(_player, level, magicLevel) -- already compared to the official tibia | compared date: 08/03/21(m/d/y) (need more chars test accuracy)
-	local min = (level * 0.2 + magicLevel * 1.795)
-	local max = (level * 0.2 + magicLevel * 1.795) + 5
+	local min = (level * 0.4 + magicLevel * 1.8)
+	local max = (level * 0.4 + magicLevel * 2) + 10
 	return min, max
 end
 
@@ -18,15 +18,21 @@ function spell.onCastSpell(creature, variant)
 	return combat:execute(creature, variant)
 end
 
-spell:name("Bruise Bane")
-spell:words("exura infir ico")
+spell:name("Persistir")
+spell:words("sanvia modicus inctus")
 spell:group("healing")
-spell:vocation("knight;true", "elite knight;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de guerreiro do fogo",
+	"aprendiz de guerreiro da agua",
+	"aprendiz de guerreiro da terra",
+	"aprendiz de guerreiro do ar"
+)
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_BRUISE_BANE)
 spell:id(170)
 spell:cooldown(1000)
 spell:groupCooldown(1000)
-spell:level(1)
+spell:level(5)
 spell:mana(10)
 spell:isSelfTarget(true)
 spell:isAggressive(false)

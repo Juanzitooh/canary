@@ -142,7 +142,9 @@ void Database::createDatabaseBackup(bool compress) const {
 				for (const auto &file : std::filesystem::directory_iterator(entry)) {
 					if (file.path().extension() == ".gz") {
 						auto fileTime = std::filesystem::last_write_time(file);
-						auto fileTimeSystemClock = std::chrono::clock_cast<std::chrono::system_clock>(fileTime);
+						auto fileTimeSystemClock = std::chrono::system_clock::from_time_t(
+							std::chrono::duration_cast<std::chrono::seconds>(fileTime.time_since_epoch()).count()
+						);
 
 						if (fileTimeSystemClock < sevenDaysAgo) {
 							std::filesystem::remove(file);

@@ -53,7 +53,7 @@ spell:name("Executioner's Throw")
 spell:words("exori amp kor")
 spell:level(300)
 spell:mana(225)
-spell:isPremium(true)
+spell:isPremium(false)
 spell:range(5)
 spell:needTarget(true)
 spell:blockWalls(true)
@@ -61,5 +61,11 @@ spell:needWeapon(true)
 spell:cooldown(18 * 1000)
 spell:groupCooldown(2 * 1000)
 spell:needLearn(true)
-spell:vocation("knight;true", "elite knight;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de guerreiro do fogo",
+	"aprendiz de guerreiro da agua",
+	"aprendiz de guerreiro da terra",
+	"aprendiz de guerreiro do ar"
+)
 spell:register()

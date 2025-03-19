@@ -112,8 +112,7 @@ function bossDeath.onDeath(creature, corpse, killer, mostDamageKiller, lastHitUn
 				reward:addRewardBossItems(playerLoot)
 
 				if con.player then
-					local collorMessage = player:getClient().version > 1200
-					local lootMessage = ("The following items dropped by %s are available in your reward chest: %s"):format(creature:getName(), reward:getContentDescription(collorMessage))
+					local lootMessage = ("The following items dropped by %s are available in your reward chest: %s"):format(creature:getName(), reward:getContentDescription())
 					if rolls > 1 then
 						lootMessage = lootMessage .. " (boss bonus)"
 					end

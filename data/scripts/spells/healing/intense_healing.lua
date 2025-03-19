@@ -18,10 +18,17 @@ function spell.onCastSpell(creature, variant)
 	return combat:execute(creature, variant)
 end
 
-spell:name("Intense Healing")
+spell:name("Fluir Vital")
 spell:words("exura gran")
 spell:group("healing")
-spell:vocation("druid;true", "elder druid;true", "paladin;true", "royal paladin;true", "sorcerer;true", "master sorcerer;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de arqueiro da agua",
+	"aprendiz de arqueiro da terra",
+	"aprendiz de arqueiro do ar",
+	"aprendiz de guerreiro da terra",
+	"aprendiz de guerreiro da agua"
+)
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_INTENSE_HEALING)
 spell:id(2)
 spell:cooldown(1000)

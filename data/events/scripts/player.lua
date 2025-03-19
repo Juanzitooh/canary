@@ -209,7 +209,7 @@ function Player:onLookInBattleList(creature, distance)
 		return false
 	end
 
-	local description = "You see " .. creature:getDescription(distance)
+	local description = "Olhando " .. creature:getDescription(distance)
 	if creature:isMonster() then
 		local master = creature:getMaster()
 		local summons = { "sorcerer familiar", "knight familiar", "druid familiar", "paladin familiar" }

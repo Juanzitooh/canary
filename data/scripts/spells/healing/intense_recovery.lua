@@ -17,10 +17,15 @@ function spell.onCastSpell(creature, variant)
 	return combat:execute(creature, variant)
 end
 
-spell:name("Intense Recovery")
-spell:words("utura gran")
+spell:name("Resiliencia Elemental")
+spell:words("sanviva magnus")
 spell:group("healing")
-spell:vocation("knight;true", "elite knight;true", "paladin;true", "royal paladin;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de guerreiro da terra",
+    "aprendiz de arqueiro da terra",
+    "aprendiz de guerreiro do ar"
+)
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_INTENSE_RECOVERY)
 spell:id(160)
 spell:cooldown(cooldown)
@@ -29,6 +34,6 @@ spell:level(100)
 spell:mana(165)
 spell:isSelfTarget(true)
 spell:isAggressive(false)
-spell:isPremium(true)
+spell:isPremium(false)
 spell:needLearn(false)
 spell:register()

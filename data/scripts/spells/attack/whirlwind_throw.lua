@@ -28,7 +28,7 @@ spell:castSound(SOUND_EFFECT_TYPE_SPELL_OR_RUNE)
 spell:impactSound(SOUND_EFFECT_TYPE_SPELL_WHIRLWIND_THROW)
 spell:level(28)
 spell:mana(40)
-spell:isPremium(true)
+spell:isPremium(false)
 spell:range(5)
 spell:needTarget(true)
 spell:blockWalls(true)
@@ -36,5 +36,11 @@ spell:needWeapon(true)
 spell:cooldown(6 * 1000)
 spell:groupCooldown(2 * 1000)
 spell:needLearn(false)
-spell:vocation("knight;true", "elite knight;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de guerreiro do fogo",
+	"aprendiz de guerreiro da agua",
+	"aprendiz de guerreiro da terra",
+	"aprendiz de guerreiro do ar"
+)
 spell:register()

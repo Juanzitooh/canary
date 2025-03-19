@@ -39,14 +39,17 @@ end
 
 spell:group("support", "crippling")
 spell:id(243)
-spell:name("Expose Weakness")
-spell:words("exori moe")
+spell:name("Expor Fraquezas")
+spell:words("impulsus fragilis")
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_EXPOSE_WEAKNESS)
 spell:level(275)
 spell:mana(400)
 spell:isSelfTarget(true)
 spell:cooldown(12 * 1000)
 spell:groupCooldown(2 * 1000, 12 * 1000)
-spell:vocation("sorcerer;true", "master sorcerer;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de mago da terra"
+)
 spell:needLearn(false)
 spell:register()

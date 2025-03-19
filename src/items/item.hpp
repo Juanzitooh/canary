@@ -166,15 +166,16 @@ protected:
 		return attributePtr->getAttributeVector();
 	}
 
-	int64_t getInteger(ItemAttribute_t type) const {
+	const int64_t &getInteger(ItemAttribute_t type) const {
+		static int64_t emptyInt;
 		if (!attributePtr) {
-			return {};
+			return emptyInt;
 		}
 
 		return attributePtr->getAttributeValue(type);
 	}
 	const std::string &getString(ItemAttribute_t type) const {
-		static const std::string emptyString;
+		static std::string emptyString;
 		if (!attributePtr) {
 			return emptyString;
 		}
@@ -675,7 +676,6 @@ public:
 		return false;
 	}
 	bool hasImbuementCategoryId(uint16_t categoryId) const;
-	bool hasImbuementAttribute(const std::string &attributeSlot) const;
 	bool hasImbuements() const {
 		for (uint8_t slotid = 0; slotid < getImbuementSlot(); slotid++) {
 			ImbuementInfo imbuementInfo;
@@ -705,14 +705,6 @@ public:
 	bool canBeMoved() const;
 	void checkDecayMapItemOnMove();
 
-	void setActor(bool value) {
-		m_hasActor = value;
-	}
-
-	bool hasActor() const {
-		return m_hasActor;
-	}
-
 protected:
 	std::weak_ptr<Cylinder> m_parent;
 
@@ -722,7 +714,6 @@ protected:
 	bool loadedFromMap = false;
 	bool isLootTrackeable = false;
 	bool decayDisabled = false;
-	bool m_hasActor = false;
 
 private:
 	void setImbuement(uint8_t slot, uint16_t imbuementId, uint32_t duration);

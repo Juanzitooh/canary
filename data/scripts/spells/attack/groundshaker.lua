@@ -22,15 +22,21 @@ end
 
 spell:group("attack")
 spell:id(106)
-spell:name("Groundshaker")
-spell:words("exori mas")
+spell:name("Esmagar Terreno")
+spell:words("impulsus extensus")
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_GROUNDSHAKER)
 spell:level(33)
 spell:mana(160)
-spell:isPremium(true)
+spell:isPremium(false)
 spell:needWeapon(true)
 spell:cooldown(8 * 1000)
 spell:groupCooldown(2 * 1000)
 spell:needLearn(false)
-spell:vocation("knight;true", "elite knight;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de guerreiro do fogo",
+	"aprendiz de guerreiro da agua",
+	"aprendiz de guerreiro da terra",
+	"aprendiz de guerreiro do ar"
+)
 spell:register()

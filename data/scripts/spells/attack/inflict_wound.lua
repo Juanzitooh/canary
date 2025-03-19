@@ -18,8 +18,8 @@ end
 
 spell:group("attack")
 spell:id(141)
-spell:name("Inflict Wound")
-spell:words("utori kor")
+spell:name("Golpe Perfurante")
+spell:words("incitare fragilis")
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_OR_RUNE)
 spell:impactSound(SOUND_EFFECT_TYPE_SPELL_INFLICT_WOUND)
 spell:level(40)
@@ -31,5 +31,11 @@ spell:blockWalls(true)
 spell:cooldown(30 * 1000)
 spell:groupCooldown(2 * 1000)
 spell:needLearn(false)
-spell:vocation("knight;true", "elite knight;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de guerreiro do fogo",
+	"aprendiz de guerreiro da agua",
+	"aprendiz de guerreiro da terra",
+	"aprendiz de guerreiro do ar"
+)
 spell:register()

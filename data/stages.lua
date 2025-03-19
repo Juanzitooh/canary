@@ -2,87 +2,75 @@
 -- Maxlevel is OPTIONAL, but is considered infinite by default
 -- Create a stage with minlevel 1 and no maxlevel to disable stages
 experienceStages = {
-	{
-		minlevel = 1,
-		maxlevel = 8,
-		multiplier = 7,
-	},
-	{
-		minlevel = 9,
-		maxlevel = 20,
-		multiplier = 6,
-	},
-	{
-		minlevel = 21,
-		maxlevel = 50,
-		multiplier = 5,
-	},
-	{
-		minlevel = 51,
-		maxlevel = 100,
-		multiplier = 4,
-	},
-	{
-		minlevel = 101,
-		multiplier = 2,
-	},
+    { minlevel = 1, maxlevel = 10, multiplier = 5 },
+    { minlevel = 11, maxlevel = 20, multiplier = 4.9 },
+    { minlevel = 21, maxlevel = 30, multiplier = 4.8 },
+    { minlevel = 31, maxlevel = 40, multiplier = 4.7 },
+    { minlevel = 41, maxlevel = 50, multiplier = 4.6 },
+    { minlevel = 51, maxlevel = 60, multiplier = 4.5 },
+    { minlevel = 61, maxlevel = 70, multiplier = 4.3 },
+    { minlevel = 71, maxlevel = 80, multiplier = 4.1 },
+    { minlevel = 81, maxlevel = 90, multiplier = 3.9 },
+    { minlevel = 91, maxlevel = 100, multiplier = 3.7 },
+    { minlevel = 101, maxlevel = 110, multiplier = 3.5 },
+    { minlevel = 111, maxlevel = 120, multiplier = 3.3 },
+    { minlevel = 121, maxlevel = 130, multiplier = 3.1 },
+    { minlevel = 131, maxlevel = 140, multiplier = 2.9 },
+    { minlevel = 141, maxlevel = 150, multiplier = 2.7 },
+    { minlevel = 151, maxlevel = 160, multiplier = 2.5 },
+    { minlevel = 161, maxlevel = 170, multiplier = 2.3 },
+    { minlevel = 171, maxlevel = 180, multiplier = 2.1 },
+    { minlevel = 181, maxlevel = 190, multiplier = 1.9 },
+    { minlevel = 191, maxlevel = 200, multiplier = 1.7 },
+    { minlevel = 201, maxlevel = 210, multiplier = 1.5 },
+    { minlevel = 211, maxlevel = 220, multiplier = 1.3 },
+    { minlevel = 221, maxlevel = 230, multiplier = 1.2 },
+    { minlevel = 231, maxlevel = 240, multiplier = 1.1 },
+    { minlevel = 241, multiplier = 1 }
 }
 
 skillsStages = {
-	{
-		minlevel = 10,
-		maxlevel = 60,
-		multiplier = 15,
-	},
-	{
-		minlevel = 61,
-		maxlevel = 80,
-		multiplier = 10,
-	},
-	{
-		minlevel = 81,
-		maxlevel = 110,
-		multiplier = 6,
-	},
-	{
-		minlevel = 111,
-		maxlevel = 125,
-		multiplier = 4,
-	},
-	{
-		minlevel = 126,
-		multiplier = 2,
-	},
+    { minlevel = 10, maxlevel = 15, multiplier = 10 },
+    { minlevel = 16, maxlevel = 20, multiplier = 9 },
+    { minlevel = 21, maxlevel = 25, multiplier = 8 },
+    { minlevel = 26, maxlevel = 30, multiplier = 7 },
+    { minlevel = 31, maxlevel = 35, multiplier = 6.5 },
+    { minlevel = 36, maxlevel = 40, multiplier = 6 },
+    { minlevel = 41, maxlevel = 45, multiplier = 5.5 },
+    { minlevel = 46, maxlevel = 50, multiplier = 5 },
+    { minlevel = 51, maxlevel = 55, multiplier = 4.5 },
+    { minlevel = 56, maxlevel = 60, multiplier = 4 },
+    { minlevel = 61, maxlevel = 65, multiplier = 3.5 },
+    { minlevel = 66, maxlevel = 70, multiplier = 3 },
+    { minlevel = 71, maxlevel = 75, multiplier = 2.5 },
+    { minlevel = 76, maxlevel = 80, multiplier = 2 },
+    { minlevel = 81, maxlevel = 85, multiplier = 1.8 },
+    { minlevel = 86, maxlevel = 90, multiplier = 1.6 },
+    { minlevel = 91, maxlevel = 95, multiplier = 1.4 },
+    { minlevel = 96, maxlevel = 99, multiplier = 1.2 },
+    { minlevel = 100, multiplier = 1 }
 }
 
 magicLevelStages = {
-	{
-		minlevel = 0,
-		maxlevel = 60,
-		multiplier = 10,
-	},
-	{
-		minlevel = 61,
-		maxlevel = 80,
-		multiplier = 7,
-	},
-	{
-		minlevel = 81,
-		maxlevel = 100,
-		multiplier = 5,
-	},
-	{
-		minlevel = 101,
-		maxlevel = 110,
-		multiplier = 4,
-	},
-	{
-		minlevel = 111,
-		maxlevel = 125,
-		multiplier = 3,
-	},
-	{
-		minlevel = 126,
-		multiplier = 2,
-	},
+    { minlevel = 0, maxlevel = 5, multiplier = 10 },
+    { minlevel = 6, maxlevel = 10, multiplier = 9 },
+    { minlevel = 11, maxlevel = 15, multiplier = 8 },
+    { minlevel = 16, maxlevel = 20, multiplier = 7 },
+    { minlevel = 21, maxlevel = 25, multiplier = 6.5 },
+    { minlevel = 26, maxlevel = 30, multiplier = 6 },
+    { minlevel = 31, maxlevel = 35, multiplier = 5.5 },
+    { minlevel = 36, maxlevel = 40, multiplier = 5 },
+    { minlevel = 41, maxlevel = 45, multiplier = 4.5 },
+    { minlevel = 46, maxlevel = 50, multiplier = 4 },
+    { minlevel = 51, maxlevel = 55, multiplier = 3.5 },
+    { minlevel = 56, maxlevel = 60, multiplier = 3 },
+    { minlevel = 61, maxlevel = 65, multiplier = 2.5 },
+    { minlevel = 66, maxlevel = 70, multiplier = 2 },
+    { minlevel = 71, maxlevel = 75, multiplier = 1.8 },
+    { minlevel = 76, maxlevel = 80, multiplier = 1.6 },
+    { minlevel = 81, maxlevel = 85, multiplier = 1.4 },
+    { minlevel = 86, maxlevel = 90, multiplier = 1.2 },
+    { minlevel = 91, maxlevel = 95, multiplier = 1.1 },
+    { minlevel = 96, maxlevel = 99, multiplier = 1.05 },
+    { minlevel = 100, multiplier = 1 }
 }

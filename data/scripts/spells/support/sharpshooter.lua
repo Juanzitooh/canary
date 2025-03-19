@@ -41,15 +41,19 @@ function spell.onCastSpell(creature, variant)
 	return false
 end
 
-spell:name("Sharpshooter")
-spell:words("utito tempo san")
+spell:name("Mira Alada")
+spell:words("fortis tempora alatus")
 spell:group("support", "focus")
-spell:vocation("paladin;true", "royal paladin;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de arqueiro do fogo",
+	"aprendiz de arqueiro do ar"
+)
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_SHARPSHOOTER)
 spell:id(135)
 spell:cooldown(10 * 1000)
 spell:groupCooldown(2 * 1000, 10 * 1000)
-spell:level(60)
+spell:level(90)
 spell:mana(450)
 spell:isSelfTarget(true)
 spell:isAggressive(false)

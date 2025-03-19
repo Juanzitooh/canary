@@ -26,10 +26,13 @@ spell:words("exevo gran flam hur")
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_GREAT_FIRE_WAVE)
 spell:level(38)
 spell:mana(120)
-spell:isPremium(true)
+spell:isPremium(false)
 spell:needDirection(true)
 spell:cooldown(4 * 1000)
 spell:groupCooldown(2 * 1000)
 spell:needLearn(false)
-spell:vocation("sorcerer;true", "master sorcerer;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de mago do fogo"
+)
 spell:register()

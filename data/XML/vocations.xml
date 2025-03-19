@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <vocations>
-	<vocation id="0" clientid="0" baseid="0" name="None" description="none" magicshield="0" gaincap="10" gainhp="5" gainmana="5" gainhpticks="12000" gainhpamount="1" gainmanaticks="6000" gainmanaamount="2" manamultiplier="4.0" attackspeed="2000" basespeed="110" soulmax="100" gainsoulticks="120000" fromvoc="0">
+	<vocation id="0" clientid="0" baseid="0" name="none" description="none" magicshield="0" gaincap="10" gainhp="5" gainmana="5" gainhpticks="12000" gainhpamount="1" gainmanaticks="6000" gainmanaamount="2" manamultiplier="4.0" attackspeed="2000" basespeed="110" soulmax="100" gainsoulticks="12000" fromvoc="0">
 		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
 		<mitigation multiplier="1.3" primaryShield="2.05" secondaryShield="1.25" />
 		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
-		<skill id="0" multiplier="1.5" />
-		<skill id="1" multiplier="2.0" />
-		<skill id="2" multiplier="2.0" />
-		<skill id="3" multiplier="2.0" />
-		<skill id="4" multiplier="2.0" />
-		<skill id="5" multiplier="1.5" />
-		<skill id="6" multiplier="1.1" />
+		<skill id="0" multiplier="0" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="0" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="0" />
+		<skill id="5" multiplier="0" />
+		<skill id="6" multiplier="0" />
 	</vocation>
 	<vocation id="1" clientid="3" baseid="1" name="Sorcerer" description="a sorcerer" magicshield="1" gaincap="10" gainhp="5" gainmana="30" gainhpticks="12000" gainhpamount="1" gainmanaticks="3000" gainmanaamount="2" manamultiplier="1.1" attackspeed="2000" basespeed="110" soulmax="100" gainsoulticks="120000" fromvoc="1" avatarlooktype="1595">
 		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
@@ -119,5 +119,455 @@
 		<gem quality="0" name="lesser guardian gem" />
 		<gem quality="1" name="guardian gem" />
 		<gem quality="2" name="greater guardian gem" />
+	</vocation>
+
+
+
+
+	<vocation id="9" clientid="15" baseid="9" name="Aprendiz de Guerreiro do Fogo" description="um Aprendiz de Guerreiro do Fogo" magicshield="0" gaincap="25" gainhp="20" gainmana="5" gainhpticks="4000" gainhpamount="1" gainmanaticks="6000" gainmanaamount="2" manamultiplier="3.0" attackspeed="2000" basespeed="107" soulmax="0" gainsoulticks="0" fromvoc="9" avatarlooktype="1593">
+		<formula meleeDamage="1.25" distDamage="0.98" defense="1.15" armor="1.1" />
+		<mitigation multiplier="1.2" primaryShield="2" secondaryShield="1.2" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.1" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="1.1" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="1.4" />
+		<skill id="5" multiplier="1.1" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+	<vocation id="10" clientid="16" baseid="10" name="Aprendiz de Guerreiro da Agua" description="um Aprendiz de Guerreiro da Agua" magicshield="0" gaincap="25" gainhp="22" gainmana="6" gainhpticks="4000" gainhpamount="1" gainmanaticks="6000" gainmanaamount="2" manamultiplier="3.0" attackspeed="2000" basespeed="110" soulmax="0" gainsoulticks="0" fromvoc="10" avatarlooktype="1593">
+		<formula meleeDamage="1.1" distDamage="0.97" defense="1.2" armor="1.2" />
+		<mitigation multiplier="1.3" primaryShield="2.05" secondaryShield="1.25" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.1" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="1.1" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="1.4" />
+		<skill id="5" multiplier="1.1" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+	<vocation id="11" clientid="17" baseid="11" name="Aprendiz de Guerreiro da Terra" description="um Aprendiz de Guerreiro da Terra" magicshield="0" gaincap="25" gainhp="23" gainmana="4" gainhpticks="4000" gainhpamount="1" gainmanaticks="6000" gainmanaamount="2" manamultiplier="3.0" attackspeed="2000" basespeed="103" soulmax="0" gainsoulticks="0" fromvoc="11" avatarlooktype="1593">
+		<formula meleeDamage="1.0" distDamage="0.96" defense="1.25" armor="1.3" />
+		<mitigation multiplier="1.4" primaryShield="2.2" secondaryShield="1.3" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.1" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="1.1" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="1.4" />
+		<skill id="5" multiplier="1.1" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+	<vocation id="12" clientid="18" baseid="12" name="Aprendiz de Guerreiro do Ar" description="um Aprendiz de Guerreiro do Ar" magicshield="0" gaincap="25" gainhp="21" gainmana="5" gainhpticks="4000" gainhpamount="1" gainmanaticks="6000" gainmanaamount="2" manamultiplier="3.0" attackspeed="2000" basespeed="115" soulmax="0" gainsoulticks="0" fromvoc="12" avatarlooktype="1593">
+		<formula meleeDamage="1.18" distDamage="0.97" defense="1.18" armor="1.18" />
+		<mitigation multiplier="1.25" primaryShield="2" secondaryShield="1.2" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.1" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="1.1" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="1.4" />
+		<skill id="5" multiplier="1.1" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+	<vocation id="13" clientid="19" baseid="13" name="Aprendiz de Arqueiro do Fogo" description="um Aprendiz de Arqueiro do Fogo" magicshield="0" gaincap="20" gainhp="10" gainmana="13" gainhpticks="6000" gainhpamount="1" gainmanaticks="3000" gainmanaamount="2" manamultiplier="1.4" attackspeed="2000" basespeed="115" soulmax="0" gainsoulticks="0" fromvoc="13" avatarlooktype="1594">
+		<formula meleeDamage="0.98" distDamage="1.28" defense="1" armor="0.99" />
+		<mitigation multiplier="1.15" primaryShield="1.9" secondaryShield="1.1" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.2" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="1.3" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="1.1" />
+		<skill id="5" multiplier="1.2" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+	<vocation id="14" clientid="20" baseid="14" name="Aprendiz de Arqueiro da Agua" description="um Aprendiz de Arqueiro da Agua" magicshield="0" gaincap="20" gainhp="13" gainmana="15" gainhpticks="6000" gainhpamount="1" gainmanaticks="3000" gainmanaamount="2" manamultiplier="1.4" attackspeed="2000" basespeed="120" soulmax="0" gainsoulticks="0" fromvoc="14" avatarlooktype="1594">
+		<formula meleeDamage="0.97" distDamage="1.14" defense="1.09" armor="1.09" />
+		<mitigation multiplier="1.2" primaryShield="1.95" secondaryShield="1.15" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.2" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="1.3" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="1.1" />
+		<skill id="5" multiplier="1.2" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+	<vocation id="15" clientid="21" baseid="15" name="Aprendiz de Arqueiro da Terra" description="um Aprendiz de Arqueiro da Terra" magicshield="0" gaincap="20" gainhp="14" gainmana="12" gainhpticks="6000" gainhpamount="1" gainmanaticks="3000" gainmanaamount="2" manamultiplier="1.4" attackspeed="2000" basespeed="113" soulmax="0" gainsoulticks="0" fromvoc="15" avatarlooktype="1594">
+		<formula meleeDamage="0.96" distDamage="1.1" defense="1.14" armor="1.14" />
+		<mitigation multiplier="1.3" primaryShield="2" secondaryShield="1.2" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.2" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="1.3" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="1.1" />
+		<skill id="5" multiplier="1.2" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+	<vocation id="16" clientid="22" baseid="16" name="Aprendiz de Arqueiro do Ar" description="um Aprendiz de Arqueiro do Ar" magicshield="0" gaincap="20" gainhp="12" gainmana="14" gainhpticks="6000" gainhpamount="1" gainmanaticks="3000" gainmanaamount="2" manamultiplier="1.4" attackspeed="2000" basespeed="126" soulmax="0" gainsoulticks="0" fromvoc="16" avatarlooktype="1594">
+		<formula meleeDamage="0.97" distDamage="1.19" defense="1.06" armor="1.06" />
+		<mitigation multiplier="1.1" primaryShield="1.85" secondaryShield="1.05" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.2" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="1.3" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="1.1" />
+		<skill id="5" multiplier="1.2" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+	<vocation id="17" clientid="23" baseid="17" name="Aprendiz de Mago do Fogo" description="um Aprendiz de Mago do Fogo" magicshield="1" gaincap="10" gainhp="4" gainmana="32" gainhpticks="12000" gainhpamount="1" gainmanaticks="2000" gainmanaamount="2" manamultiplier="1.1" attackspeed="2000" basespeed="110" soulmax="0" gainsoulticks="0" fromvoc="17" avatarlooktype="1596">
+		<formula meleeDamage="0.96" distDamage="0.96" defense="1" armor="0.99" />
+		<mitigation multiplier="1.05" primaryShield="1.8" secondaryShield="1.05" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.3" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="1.5" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="1.5" />
+		<skill id="5" multiplier="1.4" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+	<vocation id="18" clientid="24" baseid="18" name="Aprendiz de Mago da Agua" description="um Aprendiz de Mago da Agua" magicshield="1" gaincap="10" gainhp="6" gainmana="30" gainhpticks="12000" gainhpamount="1" gainmanaticks="2000" gainmanaamount="2" manamultiplier="1.1" attackspeed="2000" basespeed="115" soulmax="0" gainsoulticks="0" fromvoc="18" avatarlooktype="1596">
+		<formula meleeDamage="0.95" distDamage="0.95" defense="1.06" armor="1.05" />
+		<mitigation multiplier="1.1" primaryShield="1.85" secondaryShield="1.05" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.3" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="1.5" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="1.5" />
+		<skill id="5" multiplier="1.4" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+	<vocation id="19" clientid="25" baseid="19" name="Aprendiz de Mago da Terra" description="um Aprendiz de Mago da Terra" magicshield="1" gaincap="10" gainhp="7" gainmana="27" gainhpticks="12000" gainhpamount="1" gainmanaticks="2000" gainmanaamount="2" manamultiplier="1.1" attackspeed="2000" basespeed="110" soulmax="0" gainsoulticks="0" fromvoc="19" avatarlooktype="1596">
+		<formula meleeDamage="0.94" distDamage="0.94" defense="1.08" armor="1.1" />
+		<mitigation multiplier="1.2" primaryShield="1.9" secondaryShield="1.1" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.3" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="1.5" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="1.5" />
+		<skill id="5" multiplier="1.4" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+	<vocation id="20" clientid="26" baseid="20" name="Aprendiz de Mago do Ar" description="um Aprendiz de Mago do Ar" magicshield="1" gaincap="10" gainhp="5" gainmana="29" gainhpticks="12000" gainhpamount="1" gainmanaticks="2000" gainmanaamount="2" manamultiplier="1.1" attackspeed="2000" basespeed="122" soulmax="0" gainsoulticks="0" fromvoc="20" avatarlooktype="1596">
+		<formula meleeDamage="0.95" distDamage="0.95" defense="1.02" armor="1.02" />
+		<mitigation multiplier="1.08" primaryShield="1.82" secondaryShield="1.03" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.3" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="1.5" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="1.5" />
+		<skill id="5" multiplier="1.4" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+
+
+	<vocation id="21" clientid="27" baseid="21" name="Humano" description="Um Humano" magicshield="0" gaincap="0" gainhp="0" gainmana="0" gainhpticks="10000" gainhpamount="50" gainmanaticks="10000" gainmanaamount="5" manamultiplier="0" attackspeed="2000" basespeed="110" soulmax="0" gainsoulticks="0" fromvoc="21" avatarlooktype="1596" >
+		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
+		<mitigation multiplier="1.3" primaryShield="2.05" secondaryShield="1.25" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.3" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="0" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="0" />
+		<skill id="5" multiplier="0" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+	<vocation id="22" clientid="28" baseid="22" name="Coletor" description="Um Coletor" magicshield="0" gaincap="0" gainhp="0" gainmana="0" gainhpticks="10000" gainhpamount="50" gainmanaticks="10000" gainmanaamount="5" manamultiplier="0" attackspeed="2000" basespeed="110" soulmax="200" gainsoulticks="10000" fromvoc="22" avatarlooktype="1596" >
+		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
+		<mitigation multiplier="1.3" primaryShield="2.05" secondaryShield="1.25" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.3" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="0" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="0" />
+		<skill id="5" multiplier="0" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+	<vocation id="23" clientid="29" baseid="23" name="Minerador" description="Um Minerador" magicshield="0" gaincap="0" gainhp="0" gainmana="0" gainhpticks="10000" gainhpamount="50" gainmanaticks="10000" gainmanaamount="5" manamultiplier="0" attackspeed="2000" basespeed="110" soulmax="200" gainsoulticks="10000" fromvoc="23" avatarlooktype="1596" >
+		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
+		<mitigation multiplier="1.3" primaryShield="2.05" secondaryShield="1.25" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.3" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="0" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="0" />
+		<skill id="5" multiplier="0" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+	<vocation id="24" clientid="30" baseid="24" name="Pescador" description="Um Pescador" magicshield="0" gaincap="0" gainhp="0" gainmana="0" gainhpticks="10000" gainhpamount="50" gainmanaticks="10000" gainmanaamount="5" manamultiplier="0" attackspeed="2000" basespeed="110" soulmax="200" gainsoulticks="10000" fromvoc="24" avatarlooktype="1596" >
+		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
+		<mitigation multiplier="1.3" primaryShield="2.05" secondaryShield="1.25" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.3" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="0" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="0" />
+		<skill id="5" multiplier="0" />
+		<skill id="6" multiplier="1.2" />
+	</vocation>
+	<vocation id="25" clientid="31" baseid="25" name="Cozinheiro" description="Um Cozinheiro" magicshield="0" gaincap="0" gainhp="0" gainmana="0" gainhpticks="10000" gainhpamount="50" gainmanaticks="10000" gainmanaamount="5" manamultiplier="0" attackspeed="2000" basespeed="110" soulmax="200" gainsoulticks="10000" fromvoc="25" avatarlooktype="1596" >
+		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
+		<mitigation multiplier="1.3" primaryShield="2.05" secondaryShield="1.25" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.3" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="0" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="0" />
+		<skill id="5" multiplier="0" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+	<vocation id="26" clientid="32" baseid="26" name="Ferreiro do Fogo" description="Um Ferreiro do Fogo" magicshield="0" gaincap="0" gainhp="0" gainmana="0" gainhpticks="10000" gainhpamount="50" gainmanaticks="10000" gainmanaamount="5" manamultiplier="0" attackspeed="2000" basespeed="110" soulmax="200" gainsoulticks="10000" fromvoc="26" avatarlooktype="1596" >
+		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
+		<mitigation multiplier="1.3" primaryShield="2.05" secondaryShield="1.25" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.3" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="0" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="0" />
+		<skill id="5" multiplier="0" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+	<vocation id="27" clientid="33" baseid="27" name="Ferreiro da Agua" description="Um Ferreiro da Agua" magicshield="0" gaincap="0" gainhp="0" gainmana="0" gainhpticks="10000" gainhpamount="50" gainmanaticks="10000" gainmanaamount="5" manamultiplier="0" attackspeed="2000" basespeed="110" soulmax="200" gainsoulticks="10000" fromvoc="27" avatarlooktype="1596" >
+		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
+		<mitigation multiplier="1.3" primaryShield="2.05" secondaryShield="1.25" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.3" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="0" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="0" />
+		<skill id="5" multiplier="0" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+	<vocation id="28" clientid="34" baseid="28" name="Ferreiro da Terra" description="Um Ferreiro da Terra" magicshield="0" gaincap="0" gainhp="0" gainmana="0" gainhpticks="10000" gainhpamount="50" gainmanaticks="10000" gainmanaamount="5" manamultiplier="0" attackspeed="2000" basespeed="110" soulmax="200" gainsoulticks="10000" fromvoc="28" avatarlooktype="1596" >
+		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
+		<mitigation multiplier="1.3" primaryShield="2.05" secondaryShield="1.25" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.3" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="0" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="0" />
+		<skill id="5" multiplier="0" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+	<vocation id="29" clientid="35" baseid="29" name="Ferreiro do Ar" description="Um Ferreiro do Ar" magicshield="0" gaincap="0" gainhp="0" gainmana="0" gainhpticks="10000" gainhpamount="50" gainmanaticks="10000" gainmanaamount="5" manamultiplier="0" attackspeed="2000" basespeed="110" soulmax="200" gainsoulticks="10000" fromvoc="29" avatarlooktype="1596" >
+		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
+		<mitigation multiplier="1.3" primaryShield="2.05" secondaryShield="1.25" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.3" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="0" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="0" />
+		<skill id="5" multiplier="0" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+	<vocation id="30" clientid="36" baseid="30" name="Artesao do Fogo" description="Um Artesao do Fogo" magicshield="0" gaincap="0" gainhp="0" gainmana="0" gainhpticks="10000" gainhpamount="50" gainmanaticks="10000" gainmanaamount="5" manamultiplier="0" attackspeed="2000" basespeed="110" soulmax="200" gainsoulticks="10000" fromvoc="30" avatarlooktype="1596" >
+		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
+		<mitigation multiplier="1.3" primaryShield="2.05" secondaryShield="1.25" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.3" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="0" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="0" />
+		<skill id="5" multiplier="0" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+	<vocation id="31" clientid="37" baseid="31" name="Artesao da Agua" description="Um Artesao da Agua" magicshield="0" gaincap="0" gainhp="0" gainmana="0" gainhpticks="10000" gainhpamount="50" gainmanaticks="10000" gainmanaamount="5" manamultiplier="0" attackspeed="2000" basespeed="110" soulmax="200" gainsoulticks="10000" fromvoc="31" avatarlooktype="1596" >
+		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
+		<mitigation multiplier="1.3" primaryShield="2.05" secondaryShield="1.25" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.3" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="0" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="0" />
+		<skill id="5" multiplier="0" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+	<vocation id="32" clientid="38" baseid="32" name="Artesao da Terra" description="Um Artesao da Terra" magicshield="0" gaincap="0" gainhp="0" gainmana="0" gainhpticks="10000" gainhpamount="50" gainmanaticks="10000" gainmanaamount="5" manamultiplier="0" attackspeed="2000" basespeed="110" soulmax="200" gainsoulticks="10000" fromvoc="32" avatarlooktype="1596" >
+		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
+		<mitigation multiplier="1.3" primaryShield="2.05" secondaryShield="1.25" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.3" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="0" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="0" />
+		<skill id="5" multiplier="0" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+	<vocation id="33" clientid="39" baseid="33" name="Artesao do Ar" description="Um Artesao do Ar" magicshield="0" gaincap="0" gainhp="0" gainmana="0" gainhpticks="10000" gainhpamount="50" gainmanaticks="10000" gainmanaamount="5" manamultiplier="0" attackspeed="2000" basespeed="110" soulmax="200" gainsoulticks="10000" fromvoc="33" avatarlooktype="1596" >
+		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
+		<mitigation multiplier="1.3" primaryShield="2.05" secondaryShield="1.25" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.3" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="0" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="0" />
+		<skill id="5" multiplier="0" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+	<vocation id="34" clientid="40" baseid="34" name="Joalheiro do Fogo" description="Um Joalheiro do Fogo" magicshield="0" gaincap="0" gainhp="0" gainmana="0" gainhpticks="10000" gainhpamount="50" gainmanaticks="10000" gainmanaamount="5" manamultiplier="0" attackspeed="2000" basespeed="110" soulmax="200" gainsoulticks="10000" fromvoc="34" avatarlooktype="1596" >
+		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
+		<mitigation multiplier="1.3" primaryShield="2.05" secondaryShield="1.25" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.3" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="0" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="0" />
+		<skill id="5" multiplier="0" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+	<vocation id="35" clientid="41" baseid="35" name="Joalheiro da Agua" description="Um Joalheiro da Agua" magicshield="0" gaincap="0" gainhp="0" gainmana="0" gainhpticks="10000" gainhpamount="50" gainmanaticks="10000" gainmanaamount="5" manamultiplier="0" attackspeed="2000" basespeed="110" soulmax="200" gainsoulticks="10000" fromvoc="35" avatarlooktype="1596" >
+		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
+		<mitigation multiplier="1.3" primaryShield="2.05" secondaryShield="1.25" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.3" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="0" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="0" />
+		<skill id="5" multiplier="0" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+	<vocation id="36" clientid="42" baseid="36" name="Joalheiro da Terra" description="Um Joalheiro da Terra" magicshield="0" gaincap="0" gainhp="0" gainmana="0" gainhpticks="10000" gainhpamount="50" gainmanaticks="10000" gainmanaamount="5" manamultiplier="0" attackspeed="2000" basespeed="110" soulmax="200" gainsoulticks="10000" fromvoc="36" avatarlooktype="1596" >
+		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
+		<mitigation multiplier="1.3" primaryShield="2.05" secondaryShield="1.25" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.3" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="0" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="0" />
+		<skill id="5" multiplier="0" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+	<vocation id="37" clientid="43" baseid="37" name="Joalheiro do Ar" description="Um Joalheiro do Ar" magicshield="0" gaincap="0" gainhp="0" gainmana="0" gainhpticks="10000" gainhpamount="50" gainmanaticks="10000" gainmanaamount="5" manamultiplier="0" attackspeed="2000" basespeed="110" soulmax="200" gainsoulticks="10000" fromvoc="37" avatarlooktype="1596" >
+		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
+		<mitigation multiplier="1.3" primaryShield="2.05" secondaryShield="1.25" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.3" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="0" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="0" />
+		<skill id="5" multiplier="0" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+	<vocation id="38" clientid="44" baseid="38" name="Alquimista do Fogo" description="Um Alquimista do Fogo" magicshield="0" gaincap="0" gainhp="0" gainmana="0" gainhpticks="10000" gainhpamount="50" gainmanaticks="10000" gainmanaamount="5" manamultiplier="0" attackspeed="2000" basespeed="110" soulmax="200" gainsoulticks="10000" fromvoc="38" avatarlooktype="1596" >
+		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
+		<mitigation multiplier="1.3" primaryShield="2.05" secondaryShield="1.25" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.3" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="0" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="0" />
+		<skill id="5" multiplier="0" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+	<vocation id="39" clientid="45" baseid="39" name="Alquimista da Agua" description="Um Alquimista da Agua" magicshield="0" gaincap="0" gainhp="0" gainmana="0" gainhpticks="10000" gainhpamount="50" gainmanaticks="10000" gainmanaamount="5" manamultiplier="0" attackspeed="2000" basespeed="110" soulmax="200" gainsoulticks="10000" fromvoc="39" avatarlooktype="1596" >
+		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
+		<mitigation multiplier="1.3" primaryShield="2.05" secondaryShield="1.25" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.3" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="0" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="0" />
+		<skill id="5" multiplier="0" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+	<vocation id="40" clientid="46" baseid="40" name="Alquimista da Terra" description="Um Alquimista da Terra" magicshield="0" gaincap="0" gainhp="0" gainmana="0" gainhpticks="10000" gainhpamount="50" gainmanaticks="10000" gainmanaamount="5" manamultiplier="0" attackspeed="2000" basespeed="110" soulmax="200" gainsoulticks="10000" fromvoc="40" avatarlooktype="1596" >
+		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
+		<mitigation multiplier="1.3" primaryShield="2.05" secondaryShield="1.25" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.3" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="0" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="0" />
+		<skill id="5" multiplier="0" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+	<vocation id="41" clientid="47" baseid="41" name="Alquimista do Ar" description="Um Alquimista do Ar" magicshield="0" gaincap="0" gainhp="0" gainmana="0" gainhpticks="10000" gainhpamount="50" gainmanaticks="10000" gainmanaamount="5" manamultiplier="0" attackspeed="2000" basespeed="110" soulmax="200" gainsoulticks="10000" fromvoc="41" avatarlooktype="1596" >
+		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
+		<mitigation multiplier="1.3" primaryShield="2.05" secondaryShield="1.25" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.3" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="0" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="0" />
+		<skill id="5" multiplier="0" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+		<vocation id="42" clientid="48" baseid="42" name="Anao" description="Um Anao" magicshield="0" gaincap="0" gainhp="0" gainmana="0" gainhpticks="10000" gainhpamount="50" gainmanaticks="10000" gainmanaamount="5" manamultiplier="0" attackspeed="2000" basespeed="110" soulmax="0" gainsoulticks="0" fromvoc="42" avatarlooktype="1596" >
+		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
+		<mitigation multiplier="1.3" primaryShield="2.05" secondaryShield="1.25" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.3" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="0" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="0" />
+		<skill id="5" multiplier="0" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+		<vocation id="43" clientid="49" baseid="43" name="Elfo" description="Um Elfo" magicshield="0" gaincap="0" gainhp="0" gainmana="0" gainhpticks="10000" gainhpamount="50" gainmanaticks="10000" gainmanaamount="5" manamultiplier="0" attackspeed="2000" basespeed="110" soulmax="0" gainsoulticks="0" fromvoc="43" avatarlooktype="1596" >
+		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
+		<mitigation multiplier="1.3" primaryShield="2.05" secondaryShield="1.25" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.3" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="0" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="0" />
+		<skill id="5" multiplier="0" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+		<vocation id="44" clientid="50" baseid="44" name="Shatari" description="Um Shatari" magicshield="0" gaincap="0" gainhp="0" gainmana="0" gainhpticks="10000" gainhpamount="50" gainmanaticks="10000" gainmanaamount="5" manamultiplier="0" attackspeed="2000" basespeed="110" soulmax="0" gainsoulticks="0" fromvoc="44" avatarlooktype="1596" >
+		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
+		<mitigation multiplier="1.3" primaryShield="2.05" secondaryShield="1.25" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.3" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="0" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="0" />
+		<skill id="5" multiplier="0" />
+		<skill id="6" multiplier="0" />
+	</vocation>
+		<vocation id="45" clientid="51" baseid="45" name="Animus" description="Um Animus" magicshield="0" gaincap="0" gainhp="0" gainmana="0" gainhpticks="10000" gainhpamount="50" gainmanaticks="10000" gainmanaamount="5" manamultiplier="0" attackspeed="2000" basespeed="110" soulmax="0" gainsoulticks="0" fromvoc="45" avatarlooktype="1596" >
+		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
+		<mitigation multiplier="1.3" primaryShield="2.05" secondaryShield="1.25" />
+		<pvp damageReceivedMultiplier="1.0" damageDealtMultiplier ="1.0"/>
+		<skill id="0" multiplier="1.3" />
+		<skill id="1" multiplier="0" />
+		<skill id="2" multiplier="0" />
+		<skill id="3" multiplier="0" />
+		<skill id="4" multiplier="0" />
+		<skill id="5" multiplier="0" />
+		<skill id="6" multiplier="0" />
 	</vocation>
 </vocations>

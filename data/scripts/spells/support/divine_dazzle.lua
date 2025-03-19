@@ -63,15 +63,20 @@ end
 
 spell:group("support")
 spell:id(238)
-spell:name("Divine Dazzle")
-spell:words("exana amp res")
+spell:name("Forma de Pedra")
+spell:words("expelis focus")
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_DIVINE_DAZZLE)
 spell:level(250)
 spell:mana(80)
 spell:isAggressive(false)
-spell:isPremium(true)
+spell:isPremium(false)
 spell:cooldown(16 * 1000)
 spell:groupCooldown(2 * 1000)
-spell:vocation("paladin;true", "royal paladin;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de mago da terra",
+	"aprendiz de arqueiro da terra"
+
+)
 spell:needLearn(false)
 spell:register()

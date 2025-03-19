@@ -2,10 +2,10 @@
 
 if Modules == nil then
 	-- default words for greeting and ungreeting the npc. Should be a table containing all such words.
-	FOCUS_GREETWORDS = { "hi", "hello" }
-	FOCUS_FAREWELLWORDS = { "bye", "farewell" }
+	FOCUS_GREETWORDS = { "hi", "hello", "oi", "ola", "salve", "opa" }
+	FOCUS_FAREWELLWORDS = { "bye", "farewell", "tchau", "adeus", "fui" }
 
-	FOCUS_TRADE_MESSAGE = { "trade", "offers" }
+	FOCUS_TRADE_MESSAGE = { "trade", "offers", "negociar", "ofertas", "valores" }
 
 	-- The word for accepting/declining an offer. CAN ONLY CONTAIN ONE FIELD! Should be a table with a single string value.
 	SHOP_YESWORD = { "yes" }

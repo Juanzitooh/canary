@@ -28,10 +28,15 @@ function spell.onCastSpell(creature, variant)
 	return combat:execute(creature, variant)
 end
 
-spell:name("Charge")
-spell:words("utani tempo hur")
+spell:name("Fluir")
+spell:words("celeris tempora fluctus")
 spell:group("support")
-spell:vocation("knight;true", "elite knight;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+
+	"aprendiz de guerreiro da agua",
+	"aprendiz de guerreiro da terra"
+)
 spell:id(131)
 spell:cooldown(2 * 1000)
 spell:groupCooldown(2 * 1000)
@@ -39,7 +44,7 @@ spell:level(25)
 spell:mana(100)
 spell:isSelfTarget(true)
 spell:isAggressive(false)
-spell:isPremium(true)
+spell:isPremium(false)
 spell:needLearn(false)
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_CHARGE)
 spell:register()

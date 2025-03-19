@@ -28,18 +28,29 @@ function spell.onCastSpell(creature, var)
 	return combat:execute(creature, var)
 end
 
-spell:name("Strong Haste")
-spell:words("utani gran hur")
+spell:name("Onda de Velocidade")
+spell:words("celeres magnus expan")
 spell:group("support")
-spell:vocation("druid;true", "elder druid;true", "sorcerer;true", "master sorcerer;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de arqueiro do fogo",
+	"aprendiz de arqueiro da agua",
+	"aprendiz de arqueiro da terra",
+	"aprendiz de arqueiro do ar",
+	"aprendiz de guerreiro do ar",
+	"aprendiz de mago do fogo",
+	"aprendiz de mago da agua",
+	"aprendiz de mago da terra",
+	"aprendiz de mago do ar"
+)
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_STRONG_HASTE)
 spell:id(39)
 spell:cooldown(2 * 1000)
 spell:groupCooldown(2 * 1000)
-spell:level(20)
+spell:level(40)
 spell:mana(100)
 spell:isSelfTarget(true)
 spell:isAggressive(false)
-spell:isPremium(true)
+spell:isPremium(false)
 spell:needLearn(false)
 spell:register()

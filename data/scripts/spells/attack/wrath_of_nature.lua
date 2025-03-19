@@ -19,15 +19,17 @@ end
 
 spell:group("attack", "focus")
 spell:id(56)
-spell:name("Wrath of Nature")
-spell:words("exevo gran mas tera")
+spell:name("Tremo do Espirito da Natureza")
+spell:words("manifesta magnus extremus petra")
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_WRATH_OF_NATURE)
 spell:level(55)
 spell:mana(700)
-spell:isPremium(true)
+spell:isPremium(false)
 spell:isSelfTarget(true)
 spell:cooldown(40 * 1000)
 spell:groupCooldown(4 * 1000, 40 * 1000)
 spell:needLearn(false)
-spell:vocation("druid;true", "elder druid;true")
+spell:vocation(
+	"aprendiz de mago da terra"
+)
 spell:register()

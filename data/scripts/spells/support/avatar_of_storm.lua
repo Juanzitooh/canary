@@ -31,7 +31,7 @@ spell:name("Avatar of Storm")
 spell:words("uteta res ven")
 spell:level(300)
 spell:mana(2200)
-spell:isPremium(true)
+spell:isPremium(false)
 spell:cooldown(2 * 60 * 60 * 1000) -- Default cooldown = 2 hours
 spell:groupCooldown(2 * 1000)
 spell:vocation("sorcerer;true", "master sorcerer;true")

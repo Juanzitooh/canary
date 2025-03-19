@@ -14,10 +14,24 @@ function spell.onCastSpell(creature, variant)
 	return combat:execute(creature, variant)
 end
 
-spell:name("Great Light")
-spell:words("utevo gran lux")
+spell:name("Iluminar a Volta")
+spell:words("videre magnus lumen")
 spell:group("support")
-spell:vocation("druid;true", "elder druid;true", "knight;true", "elite knight;true", "paladin;true", "royal paladin;true", "sorcerer;true", "master sorcerer;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de arqueiro do fogo",
+	"aprendiz de arqueiro da agua",
+	"aprendiz de arqueiro da terra",
+	"aprendiz de arqueiro do ar",
+	"aprendiz de guerreiro da agua",
+	"aprendiz de guerreiro da terra",
+	"aprendiz de guerreiro do ar",
+	"aprendiz de guerreiro do fogo",
+	"aprendiz de mago do fogo",
+	"aprendiz de mago da agua",
+	"aprendiz de mago da terra",
+	"aprendiz de mago do ar"
+)
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_GREAT_LIGHT)
 spell:id(11)
 spell:cooldown(2 * 1000)

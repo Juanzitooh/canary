@@ -19,18 +19,24 @@ end
 
 spell:group("attack")
 spell:id(57)
-spell:name("Strong Ethereal Spear")
-spell:words("exori gran con")
+spell:name("Acerto Rápido")
+spell:words("impulsus magnus tellum")
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_OR_RUNE)
 spell:impactSound(SOUND_EFFECT_TYPE_SPELL_STRONG_ETHEREAL_SPEAR)
 spell:level(90)
 spell:mana(55)
-spell:isPremium(true)
+spell:isPremium(false)
 spell:range(7)
 spell:needTarget(true)
 spell:blockWalls(true)
 spell:cooldown(8 * 1000)
 spell:groupCooldown(2 * 1000)
 spell:needLearn(false)
-spell:vocation("paladin;true", "royal paladin;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de arqueiro do fogo",
+	"aprendiz de arqueiro da agua",
+	"aprendiz de arqueiro da terra",
+	"aprendiz de arqueiro do ar"
+)
 spell:register()

@@ -20,10 +20,14 @@ function spell.onCastSpell(creature, variant)
 	return combat:execute(creature, variant)
 end
 
-spell:name("Protector")
-spell:words("utamo tempo")
+spell:name("Reforcar Base")
+spell:words("munio denfer")
 spell:group("support", "focus")
-spell:vocation("knight;true", "elite knight;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de guerreiro da agua",
+	"aprendiz de guerreiro da terra"
+)
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_PROTECTOR)
 spell:id(132)
 spell:cooldown(2 * 1000)
@@ -32,6 +36,6 @@ spell:level(55)
 spell:mana(200)
 spell:isSelfTarget(true)
 spell:isAggressive(false)
-spell:isPremium(true)
+spell:isPremium(false)
 spell:needLearn(false)
 spell:register()

@@ -64,15 +64,20 @@ end
 
 spell:group("support")
 spell:id(237)
-spell:name("Chivalrous Challenge")
-spell:words("exeta amp res")
+spell:name("Provocar")
+spell:words("itentio focus")
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_CHIVALROUS_CHALLENGE)
 spell:level(150)
 spell:mana(80)
 spell:isAggressive(false)
-spell:isPremium(true)
+spell:isPremium(false)
 spell:cooldown(2 * 1000)
 spell:groupCooldown(2 * 1000)
-spell:vocation("knight;true", "elite knight;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de guerreiro da terra",
+	"aprendiz de arqueiro da terra"
+
+)
 spell:needLearn(false)
 spell:register()

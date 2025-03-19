@@ -356,9 +356,7 @@ bool IOMapSerialize::loadHouseInfo() {
 		do {
 			const auto &house = g_game().map.houses.getHouse(result->getNumber<uint32_t>("house_id"));
 			if (house) {
-				auto listId = result->getNumber<uint32_t>("listid");
-				auto list = result->getString("list");
-				house->setAccessList(listId, list);
+				house->setAccessList(result->getNumber<uint32_t>("listid"), result->getString("list"));
 			}
 		} while (result->next());
 	}

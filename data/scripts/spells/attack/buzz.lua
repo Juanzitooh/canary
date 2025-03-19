@@ -19,8 +19,8 @@ end
 
 spell:group("attack")
 spell:id(177)
-spell:name("Buzz")
-spell:words("exori infir vis")
+spell:name("Choque")
+spell:words("impulsus modicus ventus")
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_OR_RUNE)
 spell:impactSound(SOUND_EFFECT_TYPE_SPELL_BUZZ)
 spell:level(1)
@@ -33,5 +33,11 @@ spell:blockWalls(true)
 spell:cooldown(2 * 1000)
 spell:groupCooldown(2 * 1000)
 spell:needLearn(false)
-spell:vocation("sorcerer;true", "master sorcerer;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de mago do fogo",
+	"aprendiz de mago da agua",
+	"aprendiz de mago da terra",
+	"aprendiz de mago do ar"
+)
 spell:register()

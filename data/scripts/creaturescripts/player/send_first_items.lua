@@ -1,8 +1,41 @@
 local config = {
-	[VOCATION.ID.NONE] = {
+	[VOCATION.ID.SER_HUMANO] = {
 		container = {
 			{ 3003, 1 }, -- rope
 			{ 3457, 1 }, -- shovel
+			{ 2920, 1 }, -- tocha
+		},
+	},
+	
+	[VOCATION.ID.ANAO] = {
+		container = {
+			{ 3003, 1 }, -- rope
+			{ 3457, 1 }, -- shovel
+			{ 2920, 1 }, -- tocha
+		},
+	},
+	
+	[VOCATION.ID.ELFO] = {
+		container = {
+			{ 3003, 1 }, -- rope
+			{ 3457, 1 }, -- shovel
+			{ 2920, 1 }, -- tocha
+		},
+	},
+	
+	[VOCATION.ID.SHATARI] = {
+		container = {
+			{ 3003, 1 }, -- rope
+			{ 3457, 1 }, -- shovel
+			{ 2920, 1 }, -- tocha
+		},
+	},
+	
+	[VOCATION.ID.ANIMUS] = {
+		container = {
+			{ 3003, 1 }, -- rope
+			{ 3457, 1 }, -- shovel
+			{ 2920, 1 }, -- tocha
 		},
 	},
 

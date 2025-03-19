@@ -71,7 +71,11 @@ end
 spell:name("Enchant Party")
 spell:words("utori mas sio")
 spell:group("support")
-spell:vocation("sorcerer;true", "master sorcerer;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"none"
+
+)
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_ENCHANT_PARTY)
 spell:id(129)
 spell:cooldown(2 * 1000)
@@ -80,6 +84,6 @@ spell:level(32)
 spell:mana(120)
 spell:isSelfTarget(true)
 spell:isAggressive(false)
-spell:isPremium(true)
+spell:isPremium(false)
 spell:needLearn(false)
 spell:register()

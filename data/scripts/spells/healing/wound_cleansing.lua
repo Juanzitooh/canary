@@ -18,10 +18,15 @@ function spell.onCastSpell(creature, variant)
 	return combat:execute(creature, variant)
 end
 
-spell:name("Wound Cleansing")
-spell:words("exura ico")
+spell:name("Curar ferimentos Graves")
+spell:words("sanvia ictus")
 spell:group("healing")
-spell:vocation("knight;true", "elite knight;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de guerreiro da terra",
+	"aprendiz de guerreiro da agua",
+	"aprendiz de guerreiro do ar"
+)
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_WOUND_CLEANSING)
 spell:id(123)
 spell:cooldown(1 * 1000)

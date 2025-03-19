@@ -11,8 +11,8 @@ end
 
 spell:group("support")
 spell:id(245)
-spell:name("Cancel Magic Shield")
-spell:words("exana vita")
+spell:name("Desfazer Escudo Magico")
+spell:words("expelis vivare")
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_CANCEL_MAGIC_SHIELD)
 spell:level(14)
 spell:mana(50)
@@ -21,5 +21,11 @@ spell:isSelfTarget(true)
 spell:cooldown(2 * 1000)
 spell:groupCooldown(2 * 1000)
 spell:needLearn(false)
-spell:vocation("druid;true", "sorcerer;true", "elder druid;true", "master sorcerer;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de mago do fogo",
+	"aprendiz de mago da agua",
+	"aprendiz de mago da terra",
+	"aprendiz de mago do ar"
+)
 spell:register()

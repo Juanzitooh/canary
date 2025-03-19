@@ -6507,7 +6507,7 @@
 	</item>
 	<item id="2976" article="a" name="birdcage">
 		<attribute key="primarytype" value="decoration"/>
-		<attribute key="description" value="You see a little bird inside."/>
+		<attribute key="description" value="Olhando a little bird inside."/>
 		<attribute key="weight" value="9200"/>
 	</item>
 	<item id="2977" article="a" name="pumpkinhead">
@@ -7911,7 +7911,7 @@
 	<item id="3204" article="a" name="dead human"/>
 	<item id="3205" article="a" name="family brooch">
 		<attribute key="primarytype" value="quest items"/>
-		<attribute key="description" value="You see the familyname Windtrouser engraved on this brooch"/>
+		<attribute key="description" value="Olhando the familyname Windtrouser engraved on this brooch"/>
 		<attribute key="weight" value="110"/>
 	</item>
 	<item id="3206" article="a" name="dragonfetish">
@@ -7969,7 +7969,7 @@
 	</item>
 	<item id="3214" article="a" name="blessed ankh">
 		<attribute key="primarytype" value="quest items"/>
-		<attribute key="description" value="You see the engraving of a white raven on its surface"/>
+		<attribute key="description" value="Olhando the engraving of a white raven on its surface"/>
 		<attribute key="weight" value="420"/>
 	</item>
 	<item id="3215" article="a" name="phoenix egg">
@@ -11650,7 +11650,7 @@
 	</item>
 	<item id="3700" article="a" name="blueberry bush">
 		<attribute key="primarytype" value="bushes"/>
-		<attribute key="duration" value="300"/>
+		<attribute key="duration" value="60"/>
 		<attribute key="decayTo" value="3699"/>
 	</item>
 	<item id="3701" name="jungle grass">
@@ -11732,14 +11732,16 @@
 		<attribute key="primarytype" value="plants and herbs"/>
 		<attribute key="weight" value="100"/>
 	</item>
-	<item id="3742" article="an" name="orange tree">
+	<item id="3742" article="a" name="orange tree">
 		<attribute key="primarytype" value="trees"/>
 	</item>
 	<item id="3743" article="a" name="thread tree">
 		<attribute key="primarytype" value="trees"/>
 	</item>
-	<item id="3744" article="a" name="jungle dweller bush">
-		<attribute key="primarytype" value="bushes"/>
+	<item id="3744" article="a" name="orange tree">
+		<attribute key="primarytype" value="trees"/>
+		<attribute key="duration" value="60"/>
+		<attribute key="decayTo" value="3742"/>
 	</item>
 	<item id="3745" article="a" name="tower fern">
 		<attribute key="primarytype" value="ferns"/>
@@ -13959,7 +13961,7 @@
 	<item fromid="4603" toid="4608" name="grass"/>
 	<item fromid="4609" toid="4611" name="shallow water">
 		<attribute key="primarytype" value="natural tiles"/>
-		<attribute key="description" value="You see the silvery movement of fish."/>
+		<attribute key="description" value="Olhando the silvery movement of fish."/>
 		<attribute key="fluidsource" value="water"/>
 		<attribute key="type" value="trashholder"/>
 		<attribute key="effect" value="bluebubble"/>
@@ -14666,8 +14668,13 @@
 	<item fromid="5145" toid="5154" article="a" name="framework wall">
 		<attribute key="primarytype" value="walls"/>
 	</item>
-	<item fromid="5155" toid="5156" article="a" name="mango tree">
+	<item id="5156" article="a" name="mango tree">
 		<attribute key="primarytype" value="trees"/>
+	</item>
+	<item id="5155" article="a" name="mango tree">
+		<attribute key="primarytype" value="trees"/>
+		<attribute key="duration" value="60"/>
+		<attribute key="decayTo" value="5156"/>
 	</item>
 	<item fromid="5157" toid="5204" article="a" name="striped marquee"/>
 	<item fromid="5205" toid="5252" article="a" name="marquee"/>
@@ -32826,7 +32833,7 @@
 	</item>
 	<item fromid="14762" toid="14763" article="a" name="medusa skull">
 		<attribute key="primarytype" value="fansite items"/>
-		<attribute key="description" value="You see a medusa skull. Her hair's snakes are still alive. Awarded only on TibiaPic.com"/>
+		<attribute key="description" value="Olhando a medusa skull. Her hair's snakes are still alive. Awarded only on TibiaPic.com"/>
 		<attribute key="weight" value="1000"/>
 	</item>
 	<item fromid="14764" toid="14765" article="a" name="Durin The Almighty">
@@ -39268,8 +39275,8 @@
 	<item fromid="19224" toid="19235" name="wooden floor">
 		<attribute key="primarytype" value="artificial tiles"/>
 	</item>
-	<item id="19236" article="the" name="world board">
-		<attribute key="description" value="This board will notify you of currently active mini world changes all over Tibia."/>
+	<item id="19236" article="O" name="Quadro de Taxas do Mercado">
+		<attribute key="description" value="Nesse quadro voce encontra o valor das taxas governamentais e do comite de eter."/>
 	</item>
 	<item fromid="19237" toid="19242" article="a" name="smoke">
 		<attribute key="primarytype" value="fields"/>
@@ -39571,7 +39578,7 @@
 	<item fromid="19479" toid="19490" article="a" name="flowing water"/>
 	<item fromid="19491" toid="19492" article="a" name="small brook">
 		<attribute key="primarytype" value="natural tiles"/>
-		<attribute key="description" value="You see the silvery movement of fish."/>
+		<attribute key="description" value="Olhando the silvery movement of fish."/>
 	</item>
 	<item id="19493" name="RESERVED SPRITE"/>
 	<item fromid="19494" toid="19513" article="a" name="strange wall"/>
@@ -40342,7 +40349,7 @@
 	<item fromid="20092" toid="20093" article="an" name="unknown item"/>
 	<item id="20094" article="a" name="tea cup">
 		<attribute key="primarytype" value="quest items"/>
-		<attribute key="description" value="You see a chipped mug with tea stains. Someone really uses this mug a lot"/>
+		<attribute key="description" value="Olhando a chipped mug with tea stains. Someone really uses this mug a lot"/>
 		<attribute key="weight" value="200"/>
 	</item>
 	<item fromid="20095" toid="20098" article="a" name="lamp">
@@ -42597,7 +42604,7 @@ My sad story is told by few living humans but many dead warriors"/>
 		<attribute key="weight" value="200"/>
 	</item>
 	<item id="21469" name="eggs of a sacred snake">
-		<attribute key="description" value="Through the brown glistening shell you see movement"/>
+		<attribute key="description" value="Through the brown glistening shell Olhando movement"/>
 		<attribute key="weight" value="20"/>
 	</item>
 	<item id="21470" article="a" name="simple arrow" plural="simple arrows">
@@ -42655,7 +42662,7 @@ My sad story is told by few living humans but many dead warriors"/>
 		<attribute key="primarytype" value="furniture"/>
 	</item>
 	<item id="21503" article="a" name="globe of the Tibian world">
-		<attribute key="description" value="You see the mainland, a lot of islands and huge white areas that are not yet explored around them."/>
+		<attribute key="description" value="Olhando the mainland, a lot of islands and huge white areas that are not yet explored around them."/>
 	</item>
 	<item id="21504" article="a" name="vial of medusa blood">
 		<attribute key="description" value="The blood is of a deep ruby red, yet smells poisonous"/>
@@ -44921,7 +44928,7 @@ Awarded by TibiaMisterios.com.br"/>
 	</item>
 	<item id="22684" article="a" name="greasy stone">
 		<attribute key="primarytype" value="rocks"/>
-		<attribute key="description" value="You see animal tracks. Maybe something lives underneath."/>
+		<attribute key="description" value="Olhando animal tracks. Maybe something lives underneath."/>
 	</item>
 	<item id="22685" article="a" name="dead goblin">
 		<attribute key="description" value="Filched for anything interesting, this corpse is of no use to you."/>
@@ -44948,7 +44955,7 @@ Awarded by TibiaMisterios.com.br"/>
 	</item>
 	<item id="22690" article="a" name="greasy stone">
 		<attribute key="primarytype" value="rocks"/>
-		<attribute key="description" value="You see animal tracks. Maybe something lives underneath."/>
+		<attribute key="description" value="Olhando animal tracks. Maybe something lives underneath."/>
 		<attribute key="duration" value="60"/>
 		<attribute key="decayTo" value="22684"/>
 	</item>
@@ -48733,7 +48740,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 	</item>
 	<item id="25701" article="a" name="single human eye">
 		<attribute key="primarytype" value="creature products"/>
-		<attribute key="description" value="You see an oculus gift. For two dimensions only"/>
+		<attribute key="description" value="Olhando an oculus gift. For two dimensions only"/>
 		<attribute key="showCount" value="0"/>
 		<attribute key="weight" value="60"/>
 	</item>
@@ -66039,7 +66046,6 @@ former students at the Noodles Academy. Awarded by TibiaLabs.com"/>
 		</attribute>
 	</item>
 	<item id="35563" article="a" name="magic shield potion">
-		<attribute key="type" value="magicshieldpotion"/>
 		<attribute key="primarytype" value="liquids"/>
 		<attribute key="description" value="This potion can only be consumed by druids and sorcerers of level 14 or higher"/>
 		<attribute key="weight" value="320"/>
@@ -76290,7 +76296,7 @@ Granted by TibiaGoals.com"/>
 		<attribute key="weight" value="20"/>
 	</item>
 	<item id="43902" article="a" name="crack">
-		<attribute key="description" value="You see to be able to fit through there" />
+		<attribute key="description" value="Olhando to be able to fit through there" />
 	</item>
 	<item id="43915" article="a" name="weretiger trophy">
 		<attribute key="primarytype" value="trophies"/>
@@ -76807,57 +76813,6 @@ Granted by TibiaGoals.com"/>
 		<attribute key="decayTo" value="44662"/>
 		<attribute key="containersize" value="10"/>
 	</item>
-	<item id="44706" article="a" name="dead bulltaur brute">
-		<attribute key="decayTo" value="0"/>
-		<attribute key="duration" value="60"/>
-		<attribute key="fluidSource" value="blood"/>
-	</item>
-	<item id="44707" article="a" name="dead bulltaur brute">
-		<attribute key="containerSize" value="30"/>
-		<attribute key="decayTo" value="44706"/>
-		<attribute key="duration" value="300"/>
-		<attribute key="fluidSource" value="blood"/>
-	</item>
-	<item id="44708" article="a" name="dead bulltaur brute">
-		<attribute key="containerSize" value="30"/>
-		<attribute key="decayTo" value="44707"/>
-		<attribute key="duration" value="300"/>
-		<attribute key="fluidSource" value="blood"/>
-	</item>
-	<item id="44710" article="a" name="dead bulltaur alchemist">
-		<attribute key="decayTo" value="0"/>
-		<attribute key="duration" value="60"/>
-		<attribute key="fluidSource" value="blood"/>
-	</item>
-	<item id="44711" article="a" name="dead bulltaur alchemist">
-		<attribute key="containerSize" value="30"/>
-		<attribute key="decayTo" value="44710"/>
-		<attribute key="duration" value="300"/>
-		<attribute key="fluidSource" value="blood"/>
-	</item>
-	<item id="44712" article="a" name="dead bulltaur alchemist">
-		<attribute key="containerSize" value="30"/>
-		<attribute key="decayTo" value="44711"/>
-		<attribute key="duration" value="300"/>
-		<attribute key="fluidSource" value="blood"/>
-	</item>
-	<item id="44714" article="a" name="dead bulltaur forgepriest">
-		<attribute key="decayTo" value="0"/>
-		<attribute key="duration" value="60"/>
-		<attribute key="fluidSource" value="blood"/>
-	</item>
-	<item id="44715" article="a" name="dead bulltaur forgepriest">
-		<attribute key="containerSize" value="30"/>
-		<attribute key="decayTo" value="44714"/>
-		<attribute key="duration" value="300"/>
-		<attribute key="fluidSource" value="blood"/>
-	</item>
-	<item id="44716" article="a" name="dead bulltaur forgepriest">
-		<attribute key="containerSize" value="30"/>
-		<attribute key="decayTo" value="44715"/>
-		<attribute key="duration" value="300"/>
-		<attribute key="fluidSource" value="blood"/>
-	</item>
 	<item id="44743" article="a" name="Nimmersatt's seal">
 		<attribute key="loottype" value="creature products" />
 		<attribute key="primarytype" value="creature products" />
@@ -76994,172 +76949,6 @@ Granted by TibiaGoals.com"/>
 	<item id="45160" article="a" name="ramp">
 		<attribute key="floorchange" value="south"/>
 	</item>
-	<item id="45639" article="a" name="cocoa grimoire">
-		<attribute key="primarytype" value="spellbooks"/>
-		<attribute key="weaponType" value="spellbook"/>
-		<attribute key="description" value="This spellbook was made from rich dark chocolate and is filled with powerful knowledge."/>
-		<attribute key="absorbpercentphysical" value="2"/>
-		<attribute key="absorbpercentenergy" value="5"/>
-		<attribute key="magiclevelpoints" value="3"/>
-		<attribute key="firemagiclevelpoints" value="1"/>
-		<attribute key="magicshieldCapacityflat" value="150"/>
-		<attribute key="magicshieldCapacitypercent" value="3"/>
-		<attribute key="defense" value="19"/>
-		<attribute key="weight" value="1500"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection death" value="3"/>
-			<attribute key="elemental protection fire" value="3"/>
-			<attribute key="elemental protection ice" value="3"/>
-			<attribute key="elemental protection holy" value="3"/>
-			<attribute key="elemental protection earth" value="3"/>
-			<attribute key="skillboost shielding" value="3"/>
-		</attribute>
-		<attribute key="augments" value="1">
-			<attribute key="ultimate flame strike" value="base">
-				<attribute key="value" value="33"/>
-			</attribute>
-		</attribute>
-		<attribute key="script" value="moveevent">
-			<attribute key="level" value="200"/>
-			<attribute key="slot" value="shield"/>
-			<attribute key="vocation" value="Sorcerer;true, Master Sorcerer"/>
-		</attribute>
-	</item>
-	<item id="45640" article="a" name="creamy grimoire">
-		<attribute key="primarytype" value="spellbooks"/>
-		<attribute key="weaponType" value="spellbook"/>
-		<attribute key="description" value="This spellbook was made from pure white chocolate and is brimming with magical finesse."/>
-		<attribute key="absorbpercentphysical" value="2"/>
-		<attribute key="absorbpercentfire" value="5"/>
-		<attribute key="magiclevelpoints" value="3"/>
-		<attribute key="healingmagiclevelpoints" value="1"/>
-		<attribute key="magicshieldCapacityflat" value="150"/>
-		<attribute key="magicshieldCapacitypercent" value="3"/>
-		<attribute key="defense" value="19"/>
-		<attribute key="weight" value="1700"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection death" value="3"/>
-			<attribute key="elemental protection energy" value="3"/>
-			<attribute key="elemental protection ice" value="3"/>
-			<attribute key="elemental protection holy" value="3"/>
-			<attribute key="elemental protection earth" value="3"/>
-			<attribute key="skillboost shielding" value="3"/>
-		</attribute>
-		<attribute key="augments" value="1">
-			<attribute key="ultimate ice strike" value="base">
-				<attribute key="value" value="33"/>
-			</attribute>
-		</attribute>
-		<attribute key="script" value="moveevent">
-			<attribute key="level" value="200"/>
-			<attribute key="slot" value="shield"/>
-			<attribute key="vocation" value="Druid;true, Elder Druid"/>
-		</attribute>
-	</item>
-	<item id="45641" article="a" name="candy necklace">
-		<attribute key="primarytype" value="amulets and necklaces"/>
-		<attribute key="description" value="This necklace provides a sugary barrier against attacks."/>
-		<attribute key="armor" value="2"/>
-		<attribute key="showAttributes" value="1"/>
-		<attribute key="absorbpercentphysical" value="3"/>
-		<attribute key="absorbpercentenergy" value="6"/>
-		<attribute key="absorbpercentearth" value="-5"/>
-		<attribute key="weight" value="510"/>
-		<attribute key="script" value="moveevent">
-			<attribute key="level" value="220"/>
-			<attribute key="slot" value="necklace"/>
-		</attribute>
-	</item>
-	<item id="45642" article="a" name="ring of temptation">
-		<attribute key="primarytype" value="rings"/>
-		<attribute key="description" value="This ring provides a delicious defense for a limited number of uses."/>
-		<attribute key="showCharges" value="1"/>
-		<attribute key="showAttributes" value="1"/>
-		<attribute key="absorbpercentmanadrain" value="30"/>
-		<attribute key="charges" value="200"/>
-		<attribute key="weight" value="80"/>
-		<attribute key="script" value="moveevent">
-			<attribute key="level" value="100"/>
-			<attribute key="slot" value="ring"/>
-		</attribute>
-	</item>
-	<item id="45643" article="a" name="biscuit barrier">
-		<attribute key="primarytype" value="shields"/>
-		<attribute key="weaponType" value="shield"/>
-		<attribute key="description" value="This tasty-looking shield protects from damage and boosts your regeneration."/>
-		<attribute key="weaponType" value="shield"/>
-		<attribute key="absorbpercentphysical" value="3"/>
-		<attribute key="absorbpercentfire" value="5"/>
-		<attribute key="skillshield" value="2"/>
-		<attribute key="manaticks" value="5000"/>
-		<attribute key="managain" value="16"/>
-		<attribute key="healthticks" value="5000"/>
-		<attribute key="healthgain" value="4"/>
-		<attribute key="lifeleechamount" value="200"/>
-		<attribute key="defense" value="36"/>
-		<attribute key="weight" value="5200"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection death" value="3"/>
-			<attribute key="elemental protection earth" value="3"/>
-			<attribute key="elemental protection ice" value="3"/>
-			<attribute key="elemental protection energy" value="3"/>
-			<attribute key="elemental protection holy" value="3"/>
-			<attribute key="skillboost shielding" value="3"/>
-		</attribute>
-		<attribute key="augments" value="1">
-			<attribute key="wound cleansing" value="base">
-				<attribute key="value" value="17"/>
-			</attribute>
-		</attribute>
-		<attribute key="script" value="moveevent">
-			<attribute key="level" value="200"/>
-			<attribute key="slot" value="shield"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
-		</attribute>
-	</item>
-	<item id="45644" article="a" name="candy-coated quiver">
-		<attribute key="primarytype" value="quivers"/>
-		<attribute key="slotType" value="right-hand"/>
-		<attribute key="showattributes" value="1"/>
-		<attribute key="absorbpercentfire" value="2"/>
-		<attribute key="containersize" value="8"/>
-		<attribute key="weight" value="1800"/>
-		<attribute key="script" value="moveevent">
-			<attribute key="level" value="200"/>
-			<attribute key="slot" value="right-hand"/>
-			<attribute key="vocation" value="Paladin;true, Royal Paladin"/>
-		</attribute>
-	</item>
-	<item id="45652" article="a" name="preserved pink seed">
-		<attribute key="loottype" value="creature products" />
-		<attribute key="primarytype" value="creature products" />
-		<attribute key="weight" value="30" />
-	</item>
-	<item id="45653" article="a" name="preserved red seed">
-		<attribute key="loottype" value="creature products" />
-		<attribute key="primarytype" value="creature products" />
-		<attribute key="weight" value="30" />
-	</item>
-	<item id="45654" article="a" name="preserved light blue seed">
-		<attribute key="loottype" value="creature products" />
-		<attribute key="primarytype" value="creature products" />
-		<attribute key="weight" value="30" />
-	</item>
-	<item id="45655" article="a" name="preserved violet seed">
-		<attribute key="loottype" value="creature products" />
-		<attribute key="primarytype" value="creature products" />
-		<attribute key="weight" value="30" />
-	</item>
-	<item id="45656" article="a" name="preserved purple seed">
-		<attribute key="loottype" value="creature products" />
-		<attribute key="primarytype" value="creature products" />
-		<attribute key="weight" value="30" />
-	</item>	
-	<item id="45657" article="a" name="preserved yellow seed">
-		<attribute key="loottype" value="creature products" />
-		<attribute key="primarytype" value="creature products" />
-		<attribute key="weight" value="30" />
-	</item>
 	<item id="46627" article="a" name="crusher">
 		<attribute key="loottype" value="tools"/>
 		<attribute key="showCharges" value="1"/>
@@ -77169,305 +76958,6 @@ Granted by TibiaGoals.com"/>
 	<item id="46628" article="a" name="amber crusher">
 		<attribute key="loottype" value="tools"/>
 		<attribute key="weight" value="30"/>
-	</item>
-	<item id="47368" article="an" name="amber slayer">
-		<attribute key="primarytype" value="sword weapons"/>
-		<attribute key="weaponType" value="sword"/>
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="elementdeath" value="50"/>
-		<attribute key="defense" value="34"/>
-		<attribute key="skillsword" value="4"/>
-		<attribute key="weight" value="7200"/>
-		<attribute key="imbuementslot" value="2">
-			<attribute key="life leech" value="3"/>
-			<attribute key="mana leech" value="3"/>
-			<attribute key="critical hit" value="3"/>
-			<attribute key="skillboost sword" value="3"/>
-		</attribute>
-		<attribute key="augments" value="1">
-			<attribute key="annihilation" value="cooldown">
-				<attribute key="value" value="8000" />
-			</attribute>
-			<attribute key="annihilation" value="critical extra damage">
-				<attribute key="value" value="14" />
-			</attribute>
-		</attribute>
-		<attribute key="script" value="moveevent;weapon">
-			<attribute key="level" value="330"/>
-			<attribute key="unproperly" value="true"/>
-			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
-		</attribute>
-	</item>
-	<item id="47369" article="an" name="amber greataxe">
-		<attribute key="primarytype" value="axe weapons"/>
-		<attribute key="weaponType" value="axe"/>
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="elementearth" value="50"/>
-		<attribute key="defense" value="34"/>
-		<attribute key="skillaxe" value="4"/>
-		<attribute key="weight" value="5900"/>
-		<attribute key="imbuementslot" value="2">
-			<attribute key="life leech" value="3"/>
-			<attribute key="mana leech" value="3"/>
-			<attribute key="critical hit" value="3"/>
-			<attribute key="skillboost axe" value="3"/>
-		</attribute>
-		<attribute key="augments" value="1">
-			<attribute key="annihilation" value="cooldown">
-				<attribute key="value" value="8000" />
-			</attribute>
-			<attribute key="annihilation" value="critical extra damage">
-				<attribute key="value" value="14" />
-			</attribute>
-		</attribute>
-		<attribute key="script" value="moveevent;weapon">
-			<attribute key="level" value="330"/>
-			<attribute key="unproperly" value="true"/>
-			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
-		</attribute>
-	</item>
-	<item id="47370" article="an" name="amber bludgeon">
-		<attribute key="primarytype" value="club weapons"/>
-		<attribute key="weaponType" value="club"/>
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="elementdeath" value="50"/>
-		<attribute key="defense" value="34"/>
-		<attribute key="skillclub" value="4"/>
-		<attribute key="weight" value="7300"/>
-		<attribute key="imbuementslot" value="2">
-			<attribute key="life leech" value="3"/>
-			<attribute key="mana leech" value="3"/>
-			<attribute key="critical hit" value="3"/>
-			<attribute key="skillboost club" value="3"/>
-		</attribute>
-		<attribute key="augments" value="1">
-			<attribute key="annihilation" value="cooldown">
-				<attribute key="value" value="8000" />
-			</attribute>
-			<attribute key="annihilation" value="critical extra damage">
-				<attribute key="value" value="14" />
-			</attribute>
-		</attribute>
-		<attribute key="script" value="moveevent;weapon">
-			<attribute key="level" value="330"/>
-			<attribute key="unproperly" value="true"/>
-			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
-		</attribute>
-	</item>
-	<item id="47371" article="an" name="amber bow">
-		<attribute key="primarytype" value="distance weapons"/>
-		<attribute key="weaponType" value="distance"/>
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="ammotype" value="arrow"/>
-		<attribute key="absorbpercentenergy" value="5"/>
-		<attribute key="skilldist" value="3"/>
-		<attribute key="hitchance" value="6"/>
-		<attribute key="range" value="6"/>
-		<attribute key="attack" value="7"/>
-		<attribute key="weight" value="3700"/>
-		<attribute key="imbuementslot" value="3">
-			<attribute key="elemental damage" value="3"/>
-			<attribute key="life leech" value="3"/>
-			<attribute key="mana leech" value="3"/>
-			<attribute key="critical hit" value="3"/>
-			<attribute key="skillboost distance" value="3"/>
-		</attribute>
-		<attribute key="augments" value="1">
-			<attribute key="divine grenade" value="critical extra damage">
-				<attribute key="value" value="8" />
-			</attribute>
-		</attribute>
-		<attribute key="script" value="moveevent;weapon">
-			<attribute key="level" value="330"/>
-			<attribute key="unproperly" value="true"/>
-			<attribute key="weaponType" value="distance"/>
-			<attribute key="vocation" value="Paladin;true, Royal Paladin"/>
-		</attribute>
-	</item>
-	<item id="47372" article="an" name="amber wand">
-		<attribute key="primarytype" value="wands"/>
-		<attribute key="weaponType" value="wand"/>
-		<attribute key="shootType" value="energy"/>
-		<attribute key="absorbpercentice" value="6"/>
-		<attribute key="magiclevelpoints" value="3"/>
-		<attribute key="energymagiclevelpoints" value="2"/>
-		<attribute key="range" value="5"/>
-		<attribute key="weight" value="2200"/>
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="3"/>
-			<attribute key="critical hit" value="3"/>
-			<attribute key="skillboost magic level" value="3"/>
-		</attribute>
-		<attribute key="augments" value="1">
-			<attribute key="rage of the skies" value="critical extra damage">
-				<attribute key="value" value="10" />
-			</attribute>
-		</attribute>
-		<attribute key="script" value="moveevent;weapon">
-			<attribute key="level" value="330"/>
-			<attribute key="mana" value="20"/>
-			<attribute key="unproperly" value="true"/>
-			<attribute key="fromDamage" value="82"/>
-			<attribute key="toDamage" value="95"/>
-			<attribute key="weaponType" value="wand"/>
-			<attribute key="wandType" value="energy"/>
-			<attribute key="vocation" value="Sorcerer;true, Master Sorcerer"/>
-			<attribute key="slot" value="hand"/>
-		</attribute>
-	</item>
-	<item id="47373" article="an" name="amber rod">
-		<attribute key="primarytype" value="rods"/>
-		<attribute key="weaponType" value="wand"/>
-		<attribute key="shootType" value="ice"/>
-		<attribute key="absorbpercentfire" value="6"/>
-		<attribute key="range" value="5"/>
-		<attribute key="magiclevelpoints" value="3"/>
-		<attribute key="icemagiclevelpoints" value="2"/>
-		<attribute key="weight" value="1800"/>
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="3"/>
-			<attribute key="critical hit" value="3"/>
-			<attribute key="skillboost magic level" value="3"/>
-		</attribute>
-		<attribute key="augments" value="1">
-			<attribute key="strong ice wave" value="critical extra damage">
-				<attribute key="value" value="6" />
-			</attribute>
-		</attribute>
-		<attribute key="script" value="moveevent;weapon">
-			<attribute key="level" value="330"/>
-			<attribute key="mana" value="20"/>
-			<attribute key="unproperly" value="true"/>
-			<attribute key="fromDamage" value="80"/>
-			<attribute key="toDamage" value="95"/>
-			<attribute key="weaponType" value="wand"/>
-			<attribute key="wandType" value="ice"/>
-			<attribute key="vocation" value="Druid;true, Elder Druid"/>
-			<attribute key="slot" value="hand"/>
-		</attribute>
-	</item>
-	<item id="47374" article="an" name="amber sabre">
-		<attribute key="primarytype" value="sword weapons"/>
-		<attribute key="weaponType" value="sword"/>
-		<attribute key="elementenergy" value="46"/>
-		<attribute key="defense" value="32"/>
-		<attribute key="extradef" value="3"/>
-		<attribute key="skillsword" value="4"/>
-		<attribute key="weight" value="5000"/>
-		<attribute key="imbuementslot" value="2">
-			<attribute key="life leech" value="3"/>
-			<attribute key="mana leech" value="3"/>
-			<attribute key="critical hit" value="3"/>
-			<attribute key="skillboost sword" value="3"/>
-		</attribute>
-		<attribute key="augments" value="1">
-			<attribute key="annihilation" value="cooldown">
-				<attribute key="value" value="8000" />
-			</attribute>
-			<attribute key="annihilation" value="critical extra damage">
-				<attribute key="value" value="14" />
-			</attribute>
-		</attribute>
-		<attribute key="script" value="moveevent;weapon">
-			<attribute key="level" value="330"/>
-			<attribute key="unproperly" value="true"/>
-			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
-			<attribute key="slot" value="hand"/>
-		</attribute>
-	</item>
-	<item id="47375" article="an" name="amber axe">
-		<attribute key="primarytype" value="axe weapons"/>
-		<attribute key="weaponType" value="axe"/>
-		<attribute key="elementice" value="46"/>
-		<attribute key="defense" value="32"/>
-		<attribute key="extradef" value="3"/>
-		<attribute key="skillaxe" value="4"/>
-		<attribute key="weight" value="5300"/>
-		<attribute key="imbuementslot" value="2">
-			<attribute key="life leech" value="3"/>
-			<attribute key="mana leech" value="3"/>
-			<attribute key="critical hit" value="3"/>
-			<attribute key="skillboost axe" value="3"/>
-		</attribute>
-		<attribute key="augments" value="1">
-			<attribute key="annihilation" value="cooldown">
-				<attribute key="value" value="8000" />
-			</attribute>
-			<attribute key="annihilation" value="critical extra damage">
-				<attribute key="value" value="14" />
-			</attribute>
-		</attribute>
-		<attribute key="script" value="moveevent;weapon">
-			<attribute key="level" value="330"/>
-			<attribute key="unproperly" value="true"/>
-			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
-			<attribute key="slot" value="hand"/>
-		</attribute>
-	</item>
-	<item id="47376" article="an" name="amber cudgel">
-		<attribute key="primarytype" value="club weapons"/>
-		<attribute key="weaponType" value="club"/>
-		<attribute key="elementfire" value="46"/>
-		<attribute key="defense" value="32"/>
-		<attribute key="extradef" value="3"/>
-		<attribute key="skillclub" value="4"/>
-		<attribute key="weight" value="5800"/>
-		<attribute key="imbuementslot" value="2">
-			<attribute key="life leech" value="3"/>
-			<attribute key="mana leech" value="3"/>
-			<attribute key="critical hit" value="3"/>
-			<attribute key="skillboost club" value="3"/>
-		</attribute>
-		<attribute key="augments" value="1">
-			<attribute key="annihilation" value="cooldown">
-				<attribute key="value" value="8000" />
-			</attribute>
-			<attribute key="annihilation" value="critical extra damage">
-				<attribute key="value" value="14" />
-			</attribute>
-		</attribute>
-		<attribute key="script" value="moveevent;weapon">
-			<attribute key="level" value="330"/>
-			<attribute key="unproperly" value="true"/>
-			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
-			<attribute key="slot" value="hand"/>
-		</attribute>
-	</item>
-	<item id="47377" article="an" name="amber crossbow">
-		<attribute key="primarytype" value="distance weapons"/>
-		<attribute key="weaponType" value="distance"/>
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="ammotype" value="bolt"/>
-		<attribute key="absorbpercentenergy" value="5"/>
-		<attribute key="skilldist" value="3"/>
-		<attribute key="hitchance" value="7"/>
-		<attribute key="range" value="6"/>
-		<attribute key="attack" value="8"/>
-		<attribute key="weight" value="3900"/>
-		<attribute key="imbuementslot" value="3">
-			<attribute key="elemental damage" value="3"/>
-			<attribute key="life leech" value="3"/>
-			<attribute key="mana leech" value="3"/>
-			<attribute key="critical hit" value="3"/>
-			<attribute key="skillboost distance" value="3"/>
-		</attribute>
-		<attribute key="augments" value="1">
-			<attribute key="divine missile" value="critical extra damage">
-				<attribute key="value" value="5" />
-			</attribute>
-		</attribute>
-		<attribute key="script" value="moveevent;weapon">
-			<attribute key="level" value="330"/>
-			<attribute key="unproperly" value="true"/>
-			<attribute key="weaponType" value="distance"/>
-			<attribute key="vocation" value="Paladin;true, Royal Paladin"/>
-		</attribute>
 	</item>
 	<item id="47381" article="an" name="orc warlord soul core">
 		<attribute key="primarytype" value="soul cores"/>
@@ -80154,76 +79644,6 @@ Granted by TibiaGoals.com"/>
 		<attribute key="description" value="Offers a soul to the Soulpit. Combine with an exalted core to turn it into a lesser soul core."/>
 		<attribute key="weight" value="100"/>
 	</item>
-	<item id="48114" article="a" name="peppermint backpack">
-		<attribute key="primarytype" value="containers"/>
-		<attribute key="containersize" value="24"/>
-		<attribute key="weight" value="1500"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="3"/>
-		</attribute>
-		<attribute key="script" value="moveevent">
-			<attribute key="slot" value="backpack"/>
-		</attribute>
-	</item>
-	<item id="48116" article="a" name="gummy rotworm" plural="gummy rotworms">
-		<attribute key="loottype" value="creature products" />
-		<attribute key="primarytype" value="food"/>
-		<attribute key="weight" value="20"/>
-	</item>
-	<item id="48249" article="an" name="milk chocolate coin">
-		<attribute key="loottype" value="creature products" />
-		<attribute key="primarytype" value="valuables"/>
-		<attribute key="weight" value="1"/>
-	</item>
-	<item id="48250" article="a" name="dark chocolate coin">
-		<attribute key="loottype" value="creature products" />
-		<attribute key="primarytype" value="valuables"/>
-		<attribute key="weight" value="1"/>
-	</item>
-	<item id="48251" article="a" name="wafer paper flower" plural="wafer paper flowers">
-		<attribute key="loottype" value="creature products" />
-		<attribute key="primarytype" value="food"/>
-		<attribute key="weight" value="5"/>
-	</item>
-	<item id="48252" article="a" name="brigadeiro" plural="brigadeiros">
-		<attribute key="loottype" value="creature products" />
-		<attribute key="primarytype" value="food"/>
-		<attribute key="weight" value="10"/>
-	</item>
-	<item id="48253" article="a" name="beijinho" plural="beijinhos">
-		<attribute key="loottype" value="creature products" />
-		<attribute key="primarytype" value="food"/>
-		<attribute key="weight" value="10"/>
-	</item>
-	<item id="48254" article="a" name="churro heart" plural="churro hearts">
-		<attribute key="loottype" value="creature products" />
-		<attribute key="primarytype" value="food"/>
-		<attribute key="weight" value="15"/>
-	</item>
-	<item id="48255" article="a" name="lime tart" plural="lime tarts">
-		<attribute key="loottype" value="creature products" />
-		<attribute key="primarytype" value="food"/>
-		<attribute key="weight" value="25"/>
-	</item>
-	<item id="48256" article="a" name="pastry dragon" plural="pastry dragons">
-		<attribute key="loottype" value="creature products" />
-		<attribute key="primarytype" value="food"/>
-		<attribute key="weight" value="25"/>
-	</item>
-	<item id="48273" article="a" name="taiyaki ice cream" plural="taiyaki ice creams">
-		<attribute key="loottype" value="creature products" />
-		<attribute key="primarytype" value="food"/>
-		<attribute key="weight" value="20"/>
-	</item>
-	<item id="48413" article="an" name="amber sickle">
-		<attribute key="primarytype" value="other items"/>
-		<attribute key="description" value="The sickle is extremely sharp and feels warm to the touch. This one is quite brittle."/>
-		<attribute key="weight" value="1050"/>
-	</item>
-	<item id="48424" article="a" name="pegasus feather">
-		<attribute key="primarytype" value="taming items"/>
-		<attribute key="weight" value="100"/>
-	</item>
 	<item id="48493" article="a" name="ladder">
 		<attribute key="type" value="ladder"/>
 	</item>
@@ -80257,48 +79677,6 @@ Granted by TibiaGoals.com"/>
 	</item>
 	<item id="48502" article="an" name="open door">
 		<attribute key="type" value="door"/>
-	</item>
-	<item id="48505" article="a" name="preserved dark seed">
-		<attribute key="loottype" value="creature products" />
-		<attribute key="primarytype" value="creature products" />
-		<attribute key="weight" value="30" />
-	</item>
-	<item id="48508" article="a" name="amber souvenir" plural="amber souvenirs">
-		<attribute key="loottype" value="creature products" />
-		<attribute key="primarytype" value="food"/>
-		<attribute key="weight" value="25"/>
-	</item>
-	<item id="48509" article="a" name="resinous fish fin" plural="resinous fish fins">
-		<attribute key="loottype" value="creature products" />
-		<attribute key="primarytype" value="food"/>
-		<attribute key="weight" value="25"/>
-	</item>
-	<item id="48510" article="a" name="demon root" plural="demon roots">
-		<attribute key="loottype" value="creature products" />
-		<attribute key="primarytype" value="food"/>
-		<attribute key="weight" value="25"/>
-	</item>
-	<item id="48511" article="a" name="resin parasite" plural="resin parasites">
-		<attribute key="loottype" value="creature products" />
-		<attribute key="primarytype" value="food"/>
-		<attribute key="weight" value="25"/>
-	</item>
-	<item id="48514" article="a" name="strange inedible fruit">
-		<attribute key="weight" value="25"/>
-	</item>
-	<item id="48515" article="a" name="petrified leaf">
-		<attribute key="description" value="Rootwalkers can use this to enhance their attire."/>
-		<attribute key="weight" value="50"/>
-	</item>
-	<item id="48516" article="a" name="root tentacle" plural="root tentacles">
-		<attribute key="loottype" value="creature products" />
-		<attribute key="primarytype" value="food"/>
-		<attribute key="weight" value="100"/>
-	</item>
-	<item id="48517" article="a" name="fish eye">
-		<attribute key="loottype" value="creature products" />
-		<attribute key="primarytype" value="creature products"/>
-		<attribute key="weight" value="100"/>
 	</item>
 	<item id="48520" article="a" name="closed door">
 		<attribute key="type" value="door"/>
@@ -80341,11 +79719,6 @@ Granted by TibiaGoals.com"/>
 	</item>
 	<item id="48531" article="an" name="open door">
 		<attribute key="type" value="door"/>
-	</item>
-	<item id="48544" article="a" name="wad of fairy floss" plural="wad of fairy flosses">
-		<attribute key="loottype" value="creature products" />
-		<attribute key="primarytype" value="food"/>
-		<attribute key="weight" value="25"/>
 	</item>
 	<item id="48929" article="an" name="black sheep soul core">
 		<attribute key="primarytype" value="soul cores"/>

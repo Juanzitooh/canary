@@ -15,8 +15,8 @@ end
 
 spell:group("attack")
 spell:id(138)
-spell:name("Ignite")
-spell:words("utori flam")
+spell:name("Incendiar")
+spell:words("incitare ignis")
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_OR_RUNE)
 spell:impactSound(SOUND_EFFECT_TYPE_SPELL_IGNITE)
 spell:level(26)
@@ -28,5 +28,8 @@ spell:blockWalls(true)
 spell:cooldown(30 * 1000)
 spell:groupCooldown(2 * 1000)
 spell:needLearn(false)
-spell:vocation("sorcerer;true", "master sorcerer;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de mago do fogo"
+)
 spell:register()

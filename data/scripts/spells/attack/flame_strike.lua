@@ -19,18 +19,21 @@ end
 
 spell:group("attack")
 spell:id(89)
-spell:name("Flame Strike")
-spell:words("exori flam")
+spell:name("Jato de Fogo")
+spell:words("impulsus ignis")
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_OR_RUNE)
 spell:impactSound(SOUND_EFFECT_TYPE_SPELL_FLAME_STRIKE)
 spell:level(14)
 spell:mana(20)
-spell:isPremium(true)
+spell:isPremium(false)
 spell:range(3)
 spell:needCasterTargetOrDirection(true)
 spell:blockWalls(true)
 spell:cooldown(2 * 1000)
 spell:groupCooldown(2 * 1000)
 spell:needLearn(false)
-spell:vocation("sorcerer;true", "druid;true", "master sorcerer;true", "elder druid;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de mago do fogo"
+)
 spell:register()

@@ -18,10 +18,13 @@ function spell.onCastSpell(creature, variant)
 	return combat:execute(creature, variant)
 end
 
-spell:name("Intense Wound Cleansing")
-spell:words("exura gran ico")
+spell:name("Tratar Ferimentos Graves")
+spell:words("sanvia magnus ictus")
 spell:group("healing")
-spell:vocation("knight;true", "elite knight;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de guerreiro da terra"
+)
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_INTENSE_WOUND_CLEANSING)
 spell:id(158)
 spell:cooldown(600000) -- 600 sec
@@ -30,6 +33,6 @@ spell:level(80)
 spell:mana(200)
 spell:isSelfTarget(true)
 spell:isAggressive(false)
-spell:isPremium(true)
+spell:isPremium(false)
 spell:needLearn(false)
 spell:register()

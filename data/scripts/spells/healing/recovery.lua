@@ -15,10 +15,18 @@ function spell.onCastSpell(creature, variant)
 	return combat:execute(creature, variant)
 end
 
-spell:name("Recovery")
-spell:words("utura")
+spell:name("Resiliencia")
+spell:words("sanviva")
 spell:group("healing")
-spell:vocation("knight;true", "elite knight;true", "paladin;true", "royal paladin;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de guerreiro da terra",
+	"aprendiz de guerreiro da ar",
+	"aprendiz de guerreiro da agua",
+	"aprendiz de arqueiro da terra",
+	"aprendiz de arqueiro da agua",
+	"aprendiz de guerreiro do ar"
+)
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_RECOVERY)
 spell:id(159)
 spell:cooldown(1 * 60 * 1000)

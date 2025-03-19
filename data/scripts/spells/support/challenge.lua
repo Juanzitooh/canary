@@ -14,10 +14,16 @@ function spell.onCastSpell(creature, variant)
 	return combat:execute(creature, variant)
 end
 
-spell:name("Challenge")
-spell:words("exeta res")
+spell:name("Grito de Guerra")
+spell:words("itentio")
 spell:group("support")
-spell:vocation("elite knight;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de guerreiro do fogo",
+	"aprendiz de guerreiro da agua",
+	"aprendiz de guerreiro da terra",
+	"aprendiz de guerreiro do ar"
+)
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_CHALLENGE)
 spell:id(93)
 spell:cooldown(2 * 1000)
@@ -25,6 +31,6 @@ spell:groupCooldown(2 * 1000)
 spell:level(20)
 spell:mana(30)
 spell:isAggressive(false)
-spell:isPremium(true)
+spell:isPremium(false)
 spell:needLearn(false)
 spell:register()

@@ -19,15 +19,18 @@ end
 
 spell:group("attack", "focus")
 spell:id(24)
-spell:name("Hell's Core")
-spell:words("exevo gran mas flam")
+spell:name("Fogo dos Ceus")
+spell:words("manifesta magnus extensus ignis")
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_HELL_SCORE)
 spell:level(60)
 spell:mana(1100)
 spell:isSelfTarget(true)
-spell:isPremium(true)
+spell:isPremium(false)
 spell:cooldown(40 * 1000)
 spell:groupCooldown(4 * 1000, 40 * 1000)
 spell:needLearn(false)
-spell:vocation("sorcerer;true", "master sorcerer;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de mago do fogo"
+)
 spell:register()

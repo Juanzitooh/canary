@@ -72,7 +72,11 @@ end
 spell:name("Train Party")
 spell:words("utito mas sio")
 spell:group("support")
-spell:vocation("knight;true", "elite knight;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"none"
+
+)
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_TRAIN_PARTY)
 spell:id(126)
 spell:cooldown(2 * 1000)
@@ -81,6 +85,6 @@ spell:level(32)
 spell:mana(60)
 spell:isSelfTarget(true)
 spell:isAggressive(false)
-spell:isPremium(true)
+spell:isPremium(false)
 spell:needLearn(false)
 spell:register()

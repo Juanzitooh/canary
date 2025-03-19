@@ -192,11 +192,8 @@ void Creature::onCreatureWalk() {
 
 	metrics::method_latency measure(__METRICS_METHOD_NAME__);
 
-	auto selfCreature = getCreature();
-
-	g_dispatcher().addWalkEvent([self = std::weak_ptr<Creature>(selfCreature), this] {
-		const auto &creatureEvent = self.lock();
-		if (!creatureEvent) {
+	g_dispatcher().addWalkEvent([self = std::weak_ptr<Creature>(getCreature()), this] {
+		if (!self.lock()) {
 			return;
 		}
 
@@ -209,9 +206,9 @@ void Creature::onCreatureWalk() {
 			Direction dir;
 			uint32_t flags = FLAG_IGNOREFIELDDAMAGE;
 			if (getNextStep(dir, flags)) {
-				ReturnValue ret = g_game().internalMoveCreature(creatureEvent, dir, flags);
+				ReturnValue ret = g_game().internalMoveCreature(static_self_cast<Creature>(), dir, flags);
 				if (ret != RETURNVALUE_NOERROR) {
-					if (const auto &player = getPlayer()) {
+					if (std::shared_ptr<Player> player = getPlayer()) {
 						player->sendCancelMessage(ret);
 						player->sendCancelWalk();
 					}
@@ -1157,10 +1154,6 @@ void Creature::onAttacked() {
 }
 
 void Creature::onAttackedCreatureDrainHealth(const std::shared_ptr<Creature> &target, int32_t points) {
-	if (!target || points <= 0) {
-		return;
-	}
-
 	target->addDamagePoints(static_self_cast<Creature>(), points);
 }
 
@@ -1892,12 +1885,4 @@ void Creature::safeCall(std::function<void(void)> &&action) const {
 	} else if (!isInternalRemoved) {
 		action();
 	}
-}
-
-void Creature::setCombatDamage(const CombatDamage &damage) {
-	m_combatDamage = damage;
-}
-
-CombatDamage Creature::getCombatDamage() const {
-	return m_combatDamage;
 }

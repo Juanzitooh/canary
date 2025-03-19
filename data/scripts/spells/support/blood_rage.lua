@@ -20,10 +20,14 @@ function spell.onCastSpell(creature, var)
 	return combat:execute(creature, var)
 end
 
-spell:name("Blood Rage")
-spell:words("utito tempo")
+spell:name("Furia Implacavel")
+spell:words("fortis tempora")
 spell:group("support", "focus")
-spell:vocation("knight;true", "elite knight;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de guerreiro do fogo",
+	"aprendiz de guerreiro do ar"
+)
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_BLOOD_RAGE)
 spell:id(133)
 spell:cooldown(2 * 1000)
@@ -32,6 +36,6 @@ spell:level(60)
 spell:mana(290)
 spell:isSelfTarget(true)
 spell:isAggressive(false)
-spell:isPremium(true)
+spell:isPremium(false)
 spell:needLearn(false)
 spell:register()

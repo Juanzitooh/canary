@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<npcs>
+	<npc centerx="3070" centery="3047" centerz="6" radius="3">
+		<npc name="Tadeu" x="0" y="0" z="6" spawntime="60" />
+	</npc>
+	<npc centerx="3093" centery="3073" centerz="7" radius="3">
+		<npc name="Askalor" x="0" y="1" z="7" spawntime="60" direction="3" />
+	</npc>
+	<npc centerx="3075" centery="3074" centerz="7" radius="3">
+		<npc name="Gerfan" x="-2" y="0" z="7" spawntime="60" />
+	</npc>
+	<npc centerx="3072" centery="3089" centerz="7" radius="3">
+		<npc name="Maquina Bancaria" x="0" y="0" z="7" spawntime="60" direction="3" />
+	</npc>
+</npcs>

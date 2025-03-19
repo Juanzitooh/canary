@@ -24,15 +24,21 @@ end
 
 spell:group("attack")
 spell:id(80)
-spell:name("Berserk")
-spell:words("exori")
+spell:name("Golpe Giratorio")
+spell:words("impulsus")
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_BERSERK)
 spell:level(35)
 spell:mana(115)
-spell:isPremium(true)
+spell:isPremium(false)
 spell:needWeapon(true)
 spell:cooldown(4 * 1000)
 spell:groupCooldown(2 * 1000)
 spell:needLearn(false)
-spell:vocation("knight;true", "elite knight;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de guerreiro do fogo",
+	"aprendiz de guerreiro da agua",
+	"aprendiz de guerreiro da terra",
+	"aprendiz de guerreiro do ar"
+)
 spell:register()

@@ -24,10 +24,13 @@ function spell.onCastSpell(creature, variant)
 	return true
 end
 
-spell:name("Creature Illusion")
-spell:words("utevo res ina")
+spell:name("Ilusao")
+spell:words("videre ventus adint")
 spell:group("support")
-spell:vocation("druid;true", "elder druid;true", "sorcerer;true", "master sorcerer;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de mago do ar"
+)
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_CREATURE_ILLUSION)
 spell:id(38)
 spell:cooldown(2 * 1000)

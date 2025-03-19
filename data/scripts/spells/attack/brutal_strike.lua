@@ -21,8 +21,8 @@ end
 
 spell:group("attack")
 spell:id(61)
-spell:name("Brutal Strike")
-spell:words("exori ico")
+spell:name("Golpe Brutal")
+spell:words("impulsus ictus")
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_BRUTAL_STRIKE)
 spell:level(16)
 spell:mana(30)
@@ -34,5 +34,11 @@ spell:needWeapon(true)
 spell:cooldown(6 * 1000)
 spell:groupCooldown(2 * 1000)
 spell:needLearn(false)
-spell:vocation("knight;true", "elite knight;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de guerreiro do fogo",
+	"aprendiz de guerreiro da agua",
+	"aprendiz de guerreiro da terra",
+	"aprendiz de guerreiro do ar"
+)
 spell:register()

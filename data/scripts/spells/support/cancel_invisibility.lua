@@ -9,10 +9,13 @@ function spell.onCastSpell(creature, variant)
 	return combat:execute(creature, variant)
 end
 
-spell:name("Cancel Invisibility")
-spell:words("exana ina")
+spell:name("Perceber")
+spell:words("expelis obscure")
 spell:group("support")
-spell:vocation("paladin;true", "royal paladin;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de mago da agua"
+)
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_CANCEL_INVISIBILITY)
 spell:id(90)
 spell:cooldown(2 * 1000)
@@ -21,6 +24,6 @@ spell:level(26)
 spell:mana(200)
 spell:isSelfTarget(true)
 spell:isAggressive(false)
-spell:isPremium(true)
+spell:isPremium(false)
 spell:needLearn(false)
 spell:register()

@@ -19,15 +19,17 @@ end
 
 spell:group("attack")
 spell:id(120)
-spell:name("Terra Wave")
-spell:words("exevo tera hur")
+spell:name("Chuva de Pedras")
+spell:words("manifesta petra fluctus")
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_TERRA_WAVE)
 spell:level(38)
 spell:mana(170)
-spell:isPremium(true)
+spell:isPremium(false)
 spell:needDirection(true)
 spell:cooldown(4 * 1000)
 spell:groupCooldown(2 * 1000)
 spell:needLearn(false)
-spell:vocation("druid;true", "elder druid;true")
+spell:vocation(
+	"aprendiz de mago da terra"
+)
 spell:register()

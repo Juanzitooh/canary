@@ -1119,7 +1119,7 @@ GameStore.Categories = {
 				name = "Armoured War Horse",
 				price = 870,
 				id = 23,
-				description = "{character}\n{speedboost}\n\n<i>The Armoured War Horse is a dangerous black beauty! When you see its threatening, blood-red eyes coming towards you, you'll know trouble is on its way. Protected by its heavy armour plates, the warhorse is the perfect partner for dangerous hunting sessions and excessive enemy slaughtering.</i>",
+				description = "{character}\n{speedboost}\n\n<i>The Armoured War Horse is a dangerous black beauty! When Olhando its threatening, blood-red eyes coming towards you, you'll know trouble is on its way. Protected by its heavy armour plates, the warhorse is the perfect partner for dangerous hunting sessions and excessive enemy slaughtering.</i>",
 				type = GameStore.OfferTypes.OFFER_TYPE_MOUNT,
 			},
 			{

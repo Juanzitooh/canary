@@ -20,16 +20,19 @@ end
 
 spell:group("healing")
 spell:id(239)
-spell:name("Fair Wound Cleansing")
-spell:words("exura med ico")
+spell:name("Cura eterica")
+spell:words("sanvia eter ictus")
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_FAIR_WOUND_CLEANSING)
 spell:level(300)
 spell:mana(90)
-spell:isPremium(true)
+spell:isPremium(false)
 spell:isSelfTarget(true)
 spell:cooldown(1000)
 spell:groupCooldown(1000)
 spell:isAggressive(false)
-spell:vocation("knight;true", "elite knight;true")
+-- 🔥 Lista de vocações que podem usar a magia
+spell:vocation(
+	"aprendiz de guerreiro da terra"
+)
 spell:needLearn(false)
 spell:register()
