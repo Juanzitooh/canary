@@ -26,6 +26,9 @@ Storage = {
 		Key = {
 			ID1000 = 103,
 		},
+		Item = {
+			FerramentaInicial = 2000004,
+		},
 		ExampleQuest = {
 			Example = 9000,
 			Door = 9001,

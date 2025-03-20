@@ -7,9 +7,12 @@
 		<npc name="Askalor" x="0" y="1" z="7" spawntime="60" direction="3" />
 	</npc>
 	<npc centerx="3075" centery="3074" centerz="7" radius="3">
-		<npc name="Gerfan" x="-2" y="0" z="7" spawntime="60" />
+		<npc name="Gerfan" x="-2" y="0" z="7" spawntime="60" direction="1" />
 	</npc>
 	<npc centerx="3072" centery="3089" centerz="7" radius="3">
 		<npc name="Maquina Bancaria" x="0" y="0" z="7" spawntime="60" direction="3" />
+	</npc>
+	<npc centerx="5952" centery="5945" centerz="15" radius="1">
+		<npc name="Talian" x="0" y="0" z="15" spawntime="60" direction="2" />
 	</npc>
 </npcs>

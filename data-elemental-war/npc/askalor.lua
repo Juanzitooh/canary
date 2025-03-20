@@ -7,11 +7,16 @@ npcConfig.description = "Askalor, O Reitor da Academia dos Elementos."
 
 npcConfig.health = 100
 npcConfig.maxHealth = npcConfig.health
-npcConfig.walkInterval = 0
-npcConfig.walkRadius = 3
+npcConfig.walkInterval = 2000
+npcConfig.walkRadius = 2
 
 npcConfig.outfit = {
-	lookTypeEx = 2031,
+	lookType = 128,
+	lookHead = 58,
+	lookBody = 68,
+	lookLegs = 38,
+	lookFeet = 114,
+	lookAddons = 0,
 }
 
 npcConfig.flags = {

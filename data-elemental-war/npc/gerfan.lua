@@ -7,11 +7,16 @@ npcConfig.description = "Gerfan, O Lider da Guild de Mercadores."
 
 npcConfig.health = 100
 npcConfig.maxHealth = npcConfig.health
-npcConfig.walkInterval = 0
-npcConfig.walkRadius = 3
+npcConfig.walkInterval = 2000
+npcConfig.walkRadius = 2
 
 npcConfig.outfit = {
-	lookTypeEx = 2031,
+	lookType = 128,
+	lookHead = 58,
+	lookBody = 68,
+	lookLegs = 38,
+	lookFeet = 114,
+	lookAddons = 0,
 }
 
 npcConfig.flags = {
@@ -51,21 +56,23 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
--- id das vocações de trabalho por raça
-local RACE_PROFESSIONS = {
-    [21] = { "pescador", "artesao", "cozinheiro" },      -- Humano
-    [42] = { "ferreiro", "minerador", "coletor" },      -- Anão
-    [43] = { "coletor", "alquimista", "cozinheiro" },   -- Elfo
-    [44] = { "minerador", "alquimista", "joalheiro" },  -- Shatari
-    [45] = { "joalheiro", "pescador", "ferreiro", "artesao" }, -- Animus
+
+-- id das vocações de trabalho especializado por raça
+local two_job = {
+    [21] = "cozinheiro",        -- Humano
+    [42] = "ferreiro",       -- Anão
+    [43] = "alquimista",     -- Elfo
+    [44] = "joalheiro",     -- Shatari
+    [45] = "artesao",        -- Animus
 }
 
--- vocações de trabalho especializadas em algum elemento
-local SPECIALIZED_VOCATIONS = {
-    "ferreiro",       -- Ferreiro
-    "artesao",        -- artesao
-    "joalheiro",      -- Joalheiro
-    "alquimista",     -- Alquimista
+-- id das vocações de trabalho por raça, com uma opção de profissão de extração por raça
+local one_job = {
+    [21] = "pescador",       -- Humano
+    [42] = "minerador",      -- Anão
+    [43] = "coletor",        -- Elfo
+    [44] = "minerador",      -- Shatari
+    [45] = "pescador",       -- Animus
 }
 
 -- Tabela das vocações de acordo com os elementos
@@ -96,28 +103,30 @@ local STORAGE_RACE = 2000005      -- Race storage
 local ONE_HOUR = 60 * 60
 
 
--- Função giveJob corrigida
+-- Função giveJob simplificada
 local function giveJob(player, jobChoice)
-    local currentVocationStorage = player:getStorageValue(STORAGE_VOCACAO)
-
     -- Obtém a vocação do trabalho (profissão)
     local jobVocation = JOB_VOCACOES[jobChoice]
-
+    
     -- Se a profissão não existe
     if not jobVocation then
         player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Essa profissão não existe!")
         return false
     end
 
-    -- Se a profissão NÃO for especializada por elemento, apenas atribui a vocação e sai
+    -- Verifica se a profissão é especializada (elemento ou não)
     if type(jobVocation) ~= "table" then
+        -- Profissão não especializada, atribui diretamente
         player:setVocation(jobVocation)
         player:setStorageValue(STORAGE_TRABALHO_TEMPO, os.time())
         player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Agora você é um " .. jobChoice .. "! Trabalhe bem e prospere!")
         return true
     end
 
-    -- Se a profissão precisa de um elemento, verifica se o jogador tem afinidade elemental
+    -- Profissão especializada, consulta o elemento
+    local currentVocationStorage = player:getStorageValue(STORAGE_VOCACAO)
+    
+    -- Se o jogador não tem afinidade com um elemento, impede a profissão
     if currentVocationStorage == -1 then
         player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Você precisa de afinidade com algum elemento para exercer essa profissão. Fale com Askalor para aprender sobre os elementos!")
         return false
@@ -141,18 +150,18 @@ local function giveJob(player, jobChoice)
         return false
     end
 
-    -- Atribui a vocação correta baseada no elemento do jogador
-    jobVocation = jobVocation[element]
+    -- Atribui a vocação do jogador de acordo com o elemento
+    jobVocation = jobVocation[element] or jobVocation["default"]
     if not jobVocation then
         player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Sua vocação não possui essa especialização!")
         return false
     end
 
-    -- Define a vocação do jogador e armazena o tempo
+    -- Define a vocação e armazena o tempo
     player:setVocation(jobVocation)
     player:setStorageValue(STORAGE_TRABALHO_TEMPO, os.time())
 
-    -- Mensagem de sucesso (inclui elemento apenas se necessário)
+    -- Mensagem de sucesso
     local message = "Agora você é um " .. jobChoice
     if element then
         message = message .. " " .. element
@@ -164,17 +173,14 @@ local function giveJob(player, jobChoice)
 end
 
 
-
-
--- Função creatureSayCallback refatorada
+-- Função para verificar e dar o job
 local function creatureSayCallback(npc, creature, type, message)
     local player = Player(creature)
     local playerId = player:getId()
 
-    -- Obtém as informações de vocação e raça do jogador
-    local currentVocationStorage = player:getStorageValue(STORAGE_VOCATION)  -- Obtém a vocação do jogador
+    -- Obtém o ID da raça do jogador
     local playerRace = player:getStorageValue(STORAGE_RACE)  -- Obtém a raça do jogador
-    local validProfessions = RACE_PROFESSIONS[playerRace]  -- Profissões válidas para a raça do jogador
+    local questStorage = player:getStorageValue(Storage.Quest.Chamado.ProfissaoComum)  -- Obtém o storage da quest
 
     -- Verifica se a interação é válida
     if not npcHandler:checkInteraction(npc, creature) then
@@ -183,51 +189,44 @@ local function creatureSayCallback(npc, creature, type, message)
 
     -- Processa a escolha do jogador
     if npcHandler:getTopic(playerId) == 0 then
-        local validChoice = false
-
-        -- Verifica se a profissão escolhida é válida
-        for _, validProfession in ipairs(validProfessions) do
-            if MsgContains(message, validProfession) then
-                validChoice = true
-                break
-            end
-        end
-
-        -- Se for uma profissão válida
-        if validChoice then
-            -- Se for uma profissão especializada, verifica se o jogador já escolheu uma forma elemental
-            if table.contains(SPECIALIZED_VOCATIONS, message) then
-                if currentVocationStorage == -1 then
-                    npcHandler:say("Você precisa escolher uma forma elemental para exercer essa profissão especializada. Fale com Askalor para aprender sobre os elementos!", npc, creature, 10)
-                    return false
+        -- Verifica se a mensagem contém "trabalhar"
+        if MsgContains(message, "trabalhar") then
+            -- Se o jogador ainda não tiver o storage da quest
+            if questStorage == -1 then
+                -- Verifica a profissão de extração correspondente à raça do jogador
+                local job = one_job[playerRace]
+                
+                -- Se existir uma profissão válida para a raça, dá o job
+                if job then
+                    -- Chama a função giveJob para atribuir a vocação
+                    if giveJob(player, job) then
+                        player:setStorageValue(Storage.Quest.Chamado.ProfissaoComum, 1)
+                        npcHandler:say("Você agora tem o trabalho de " .. job .. ". Para completar a missão, veja as missões disponíveis.", npc, creature, 10)
+                    else
+                        npcHandler:say("Não foi possível atribuir o seu trabalho. Tente novamente mais tarde.", npc, creature, 10)
+                    end
+                else
+                    npcHandler:say("Não há profissão disponível para a sua raça no momento.", npc, creature, 10)
                 end
+            elseif questStorage == 1 then
+                -- Se o jogador já tem o trabalho atribuído
+                npcHandler:say("Está aqui novamente? Eu não te dei um trabalho? O Tadeu está te esperando, viajante!", npc, creature, 10)
             end
-
-            -- Chama a função giveJob para atribuir a vocação
-            if giveJob(player, message) then
-                npcHandler:say("Agora você tem uma nova profissão! Trabalhe duro e prospere!", npc, creature, 10)
-            else
-                npcHandler:say("Não foi possível definir sua profissão. Certifique-se de que já escolheu uma forma elemental!", npc, creature, 10)
-            end
-        else
-            -- Se a profissão não for válida para a raça do jogador
-            npcHandler:say("Essa profissão não é válida para sua raça. Aqui estão as profissões válidas para você: " .. table.concat(validProfessions, ", "), npc, creature, 10)
         end
     end
+
     return true
 end
 
--- Função greetCallback refatorada
+-- Função greetCallback refatorada (sem troca de profissão)
 local function greetCallback(npc, creature)
     local player = Player(creature)
-    local playerId = player:getId()
     
-    -- Obtém as informações de vocação, raça e tempo do jogador
-    local currentVocationStorage = player:getStorageValue(STORAGE_VOCATION)  -- Obtém a vocação do jogador
-    local currentRaceStorage = player:getStorageValue(STORAGE_RACE)     -- Obtém a raça do jogador
-    local trabalhoTime = player:getStorageValue(STORAGE_TEMPO_TRABALHO)  -- Obtém o tempo de trabalho do jogador
-    local currentTime = os.time()  -- Obtém o tempo atual
-    local hasElementalVocation = currentVocationStorage ~= -1  -- Verifica se o jogador tem vocação elemental
+    -- Mensagem inicial fixa
+    npcHandler:setMessage(MESSAGE_GREET, "Bem-vindo a Ominis, estou a procura de trabalhadores para ajudarem a reconstruir esse reino. Deseja {trabalhar} ou escutar uma {historia}?")
+
+    -- Obtém as informações de raça do jogador
+    local currentRaceStorage = player:getStorageValue(STORAGE_RACE)  -- Obtém a raça do jogador
 
     -- Se a raça ainda não foi definida (-1), define como a vocação atual do jogador
     if currentRaceStorage == -1 then
@@ -235,41 +234,6 @@ local function greetCallback(npc, creature)
         player:setStorageValue(STORAGE_RACE, currentRaceStorage)
     end
 
-    -- Se já passou mais de 1 hora desde a última troca de profissão, permite escolher uma nova
-    if trabalhoTime == -1 or (trabalhoTime > 0 and (currentTime - trabalhoTime) >= ONE_HOUR) then
-        local professionList = {}
-
-        -- Se o jogador tem vocação elemental, oferece as vocações especializadas
-        if hasElementalVocation then
-            for _, vocation in ipairs(SPECIALIZED_VOCATIONS) do
-                table.insert(professionList, vocation)
-            end
-        end
-
-        -- Adiciona as profissões básicas da raça
-        local raceProfessions = RACE_PROFESSIONS[currentRaceStorage] or {}
-        for _, profession in ipairs(raceProfessions) do
-            table.insert(professionList, profession)
-        end
-
-        -- Monta a mensagem com as profissões disponíveis
-        local professionMessage = "Jovem, qual das profissoes deseja exercer? Escolha entre "
-        for _, profession in ipairs(professionList) do
-            professionMessage = professionMessage .. "{ " .. profession .. " }, "
-        end
-        professionMessage = professionMessage:sub(1, -3)  -- Remove a última vírgula e espaço
-
-        npcHandler:setMessage(MESSAGE_GREET, professionMessage)
-        return true
-    end
-
-    -- Se ainda não passou 1 hora, informa o tempo restante
-    local remainingTime = ONE_HOUR - (currentTime - trabalhoTime)
-    local minutes = math.floor(remainingTime / 60)
-    npcHandler:setMessage(
-        MESSAGE_GREET,
-        string.format("Você ainda precisa esperar %d minutos antes de escolher uma nova profissão.", minutes)
-    )
     return true
 end
 

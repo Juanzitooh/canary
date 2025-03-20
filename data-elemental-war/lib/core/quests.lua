@@ -26,10 +26,10 @@ if not Quests then
 					missionId = 1,
 					startValue = 1,
 					endValue = 2,
-					description = "Use o que você tem na mochila para chegar ate o portal dourado e aceitar ir para o Reino Elemental.",
+					description = "Use o que tem na mochila para entrar no portal dourado e aceitar ir para o Reino Elemental.",
 				},
 				[2] = {
-					name = "Profissoes Comuns da Raça",
+					name = "Profissoes iniciais",
 					storageId = Storage.Quest.Chamado.Start,
 					missionId = 2,
 					startValue = 2,
