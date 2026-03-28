@@ -1,0 +1,499 @@
+{
+  "version": "1.1.0",
+  "scope": "ui_friendly_commands_m1_m2_user_management",
+  "groups": {
+    "gamemaster": {
+      "inherits": ["normal", "tutor", "senior tutor"],
+      "level": 4
+    },
+    "god": {
+      "inherits": ["normal", "tutor", "senior tutor", "gamemaster"],
+      "level": 6
+    }
+  },
+  "commands": [
+    {
+      "command": "/listplayers",
+      "aliases": [],
+      "group": "gamemaster",
+      "syntax": ["/listplayers", "/listplayers all"],
+      "params": [
+        {
+          "name": "mode",
+          "required": false,
+          "type": "enum",
+          "enum": ["all"],
+          "default": null,
+          "description": "Quando 'all', não filtra por atividade."
+        }
+      ],
+      "effects": [
+        "Abre ModalWindow para selecionar player e teleportar.",
+        "Sem 'all': filtra players ativos."
+      ],
+      "examples": ["/listplayers", "/listplayers all"]
+    },
+    {
+      "command": "/active",
+      "aliases": [],
+      "group": "gamemaster",
+      "syntax": ["/active"],
+      "params": [],
+      "effects": ["Teleporta para um player ativo aleatório."],
+      "examples": ["/active"]
+    },
+    {
+      "command": "/goto",
+      "aliases": [],
+      "group": "gamemaster",
+      "syntax": ["/goto <creatureName>"],
+      "params": [
+        {
+          "name": "creatureName",
+          "required": true,
+          "type": "string",
+          "description": "Nome de criatura online/localizável por Creature()."
+        }
+      ],
+      "effects": ["Teleporta executor para a posição da criatura."],
+      "errors": ["Command param required.", "Creature not found."],
+      "examples": ["/goto John", "/goto Demon"]
+    },
+    {
+      "command": "/pos",
+      "aliases": ["!pos"],
+      "group": "gamemaster",
+      "syntax": [
+        "/pos",
+        "/pos x, y, z",
+        "/pos Position(x, y, z)",
+        "/pos {x = x, y = y, z = z}"
+      ],
+      "params": [
+        {
+          "name": "position",
+          "required": false,
+          "type": "position_literal",
+          "enum": [
+            "x, y, z",
+            "Position(x, y, z)",
+            "{x = x, y = y, z = z}"
+          ],
+          "description": "Sem parâmetro, apenas retorna posição atual."
+        }
+      ],
+      "effects": [
+        "Sem parâmetro: envia posição atual.",
+        "Com parâmetro: teleporta para posição válida."
+      ],
+      "examples": ["/pos", "/pos 1000, 1000, 7", "/pos Position(1000, 1000, 7)"]
+    },
+    {
+      "command": "/town",
+      "aliases": [],
+      "group": "gamemaster",
+      "syntax": ["/town <townName|townId>"],
+      "params": [
+        {
+          "name": "town",
+          "required": true,
+          "type": "string_or_integer",
+          "description": "Nome ou ID da town."
+        }
+      ],
+      "effects": ["Teleporta para templo da cidade."],
+      "errors": ["Command param required.", "Town not found."],
+      "examples": ["/town Thais", "/town 1"]
+    },
+    {
+      "command": "/t",
+      "aliases": [],
+      "group": "gamemaster",
+      "syntax": ["/t", "/t <playerName>"],
+      "params": [
+        {
+          "name": "playerName",
+          "required": false,
+          "type": "string",
+          "description": "Se informado, teleporta alvo para o templo dele."
+        }
+      ],
+      "effects": [
+        "Sem parâmetro: teleporta executor para próprio templo.",
+        "Com parâmetro: teleporta alvo para templo do alvo."
+      ],
+      "examples": ["/t", "/t PlayerName"]
+    },
+    {
+      "command": "/kick",
+      "aliases": [],
+      "group": "gamemaster",
+      "syntax": ["/kick <playerName>"],
+      "params": [
+        {
+          "name": "playerName",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "effects": ["Desconecta jogador alvo se não tiver access group."],
+      "errors": ["Player not found.", "You cannot kick this player."],
+      "examples": ["/kick PlayerName"]
+    },
+    {
+      "command": "/info",
+      "aliases": [],
+      "group": "gamemaster",
+      "syntax": ["/info <playerName>"],
+      "params": [
+        {
+          "name": "playerName",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "effects": ["Mostra popup com IP, posição, speed, skills e level do alvo."],
+      "errors": ["Player not found."],
+      "examples": ["/info PlayerName"]
+    },
+    {
+      "command": "/mc",
+      "aliases": [],
+      "group": "gamemaster",
+      "syntax": ["/mc"],
+      "params": [],
+      "effects": ["Lista possíveis multiclients agrupados por IP."],
+      "examples": ["/mc"]
+    },
+    {
+      "command": "/namelock",
+      "aliases": [],
+      "group": "gamemaster",
+      "syntax": ["/namelock <playerName>, <reason>"],
+      "params": [
+        {
+          "name": "playerName",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "reason",
+          "required": true,
+          "type": "string",
+          "description": "Não pode vazio."
+        }
+      ],
+      "effects": ["Define kv 'namelock' e força validação quando online."],
+      "errors": ["Command param required.", "You must specify a reason."],
+      "examples": ["/namelock PlayerName, inappropriate name"]
+    },
+    {
+      "command": "/getstorage",
+      "aliases": [],
+      "group": "gamemaster",
+      "syntax": ["/getstorage <playerName>, <storageKeyOrName>"],
+      "params": [
+        {
+          "name": "playerName",
+          "required": true,
+          "type": "string",
+          "description": "Player precisa estar online."
+        },
+        {
+          "name": "storageKeyOrName",
+          "required": true,
+          "type": "integer_or_string"
+        }
+      ],
+      "effects": ["Consulta e retorna valor de storage do alvo."],
+      "examples": ["/getstorage God, 10000", "/getstorage God, wheel.scroll.abridged"]
+    },
+    {
+      "command": "/addmoney",
+      "aliases": [],
+      "group": "god",
+      "syntax": ["/addmoney <playerName>, <amount>"],
+      "params": [
+        {
+          "name": "playerName",
+          "required": true,
+          "type": "string",
+          "description": "Nome normalizado com Game.getNormalizedPlayerName."
+        },
+        {
+          "name": "amount",
+          "required": true,
+          "type": "integer",
+          "constraints": {"min": 1}
+        }
+      ],
+      "effects": ["Credita banco do jogador (Bank.credit)."],
+      "examples": ["/addmoney PlayerName, 1000000"]
+    },
+    {
+      "command": "/getkv",
+      "aliases": [],
+      "group": "god",
+      "syntax": ["/getkv <key>", "/getkv <key>, <playerName>"],
+      "params": [
+        {
+          "name": "key",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "playerName",
+          "required": false,
+          "type": "string",
+          "default": "self"
+        }
+      ],
+      "effects": ["Lê kv[key] do alvo."],
+      "examples": ["/getkv talkaction.potions.flask", "/getkv talkaction.potions.flask, PlayerName"]
+    },
+    {
+      "command": "/getallkv",
+      "aliases": [],
+      "group": "god",
+      "syntax": ["/getallkv", "/getallkv <playerName>"],
+      "params": [
+        {
+          "name": "playerName",
+          "required": false,
+          "type": "string",
+          "default": "self"
+        }
+      ],
+      "effects": ["Lista KVs numéricas >= 0 do alvo."],
+      "examples": ["/getallkv", "/getallkv PlayerName"]
+    },
+    {
+      "command": "/setkv",
+      "aliases": [],
+      "group": "god",
+      "syntax": ["/setkv <key>, <value>", "/setkv <key>, <value>, <playerName>"],
+      "params": [
+        {
+          "name": "key",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "required": true,
+          "type": "lua_expression",
+          "description": "Interpretado por load(\"return \" .. value)."
+        },
+        {
+          "name": "playerName",
+          "required": false,
+          "type": "string",
+          "default": "self"
+        }
+      ],
+      "effects": ["Define kv[key] no alvo."],
+      "errors": ["Usage: /setkv <key>,<value>[,<playerName>]", "Invalid value format."],
+      "examples": [
+        "/setkv talkaction.potions.flask, true",
+        "/setkv my.number, 123, PlayerName",
+        "/setkv my.text, \"abc\", PlayerName"
+      ]
+    },
+    {
+      "command": "/setstorage",
+      "aliases": [],
+      "group": "god",
+      "syntax": ["/setstorage <storageKey>, <value>", "/setstorage <storageKey>, <value>, <playerName>"],
+      "params": [
+        {
+          "name": "storageKey",
+          "required": true,
+          "type": "integer",
+          "description": "No código atual, precisa ser numérico."
+        },
+        {
+          "name": "value",
+          "required": true,
+          "type": "string_or_integer",
+          "default": 1
+        },
+        {
+          "name": "playerName",
+          "required": false,
+          "type": "string",
+          "default": "self"
+        }
+      ],
+      "effects": ["Define storage value no alvo e salva o player."],
+      "errors": ["The storage key is not a number.", "Player not found."],
+      "examples": ["/setstorage 10001, 1", "/setstorage 10001, 7, PlayerName"]
+    },
+    {
+      "command": "/addskill",
+      "aliases": [],
+      "group": "god",
+      "syntax": ["/addskill <playerName>, <skillOrType>, [amount]"],
+      "params": [
+        {
+          "name": "playerName",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "skillOrType",
+          "required": true,
+          "type": "enum_or_string_prefix",
+          "enum": ["level", "magic", "club", "sword", "axe", "dist", "shield", "fish"],
+          "description": "Prefixo 'l' trata como level; prefixo 'm' como magic; outros mapeiam skill (fallback fist)."
+        },
+        {
+          "name": "amount",
+          "required": false,
+          "type": "integer",
+          "default": 1,
+          "constraints": {"min": 1}
+        }
+      ],
+      "effects": ["Incrementa level/magic/skill do alvo."],
+      "examples": ["/addskill PlayerName, level, 10", "/addskill PlayerName, magic, 5", "/addskill PlayerName, sword, 3"]
+    },
+    {
+      "command": "/addmount",
+      "aliases": [],
+      "group": "god",
+      "syntax": ["/addmount <playerName>, <mountId|all>"],
+      "params": [
+        {
+          "name": "playerName",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "mountIdOrAll",
+          "required": true,
+          "type": "enum_or_integer",
+          "enum": ["all"],
+          "constraints": {"range_when_numeric": "1..231"}
+        }
+      ],
+      "effects": ["Adiciona mount única ou todas (1..231)."],
+      "examples": ["/addmount PlayerName, all", "/addmount PlayerName, 12"]
+    },
+    {
+      "command": "/addbadge",
+      "aliases": [],
+      "group": "god",
+      "syntax": ["/addbadge <playerName>, <badgeId>"],
+      "params": [
+        {"name": "playerName", "required": true, "type": "string"},
+        {"name": "badgeId", "required": true, "type": "integer"}
+      ],
+      "effects": ["Adiciona badge ao alvo."],
+      "examples": ["/addbadge PlayerName, 3"]
+    },
+    {
+      "command": "/addtitle",
+      "aliases": [],
+      "group": "god",
+      "syntax": ["/addtitle <playerName>, <titleId>"],
+      "params": [
+        {"name": "playerName", "required": true, "type": "string"},
+        {"name": "titleId", "required": true, "type": "integer"}
+      ],
+      "effects": ["Adiciona título ao alvo."],
+      "examples": ["/addtitle PlayerName, 5"]
+    },
+    {
+      "command": "/settitle",
+      "aliases": [],
+      "group": "god",
+      "syntax": ["/settitle <playerName>, <titleId>"],
+      "params": [
+        {"name": "playerName", "required": true, "type": "string"},
+        {"name": "titleId", "required": true, "type": "integer"}
+      ],
+      "effects": ["Define título atual do alvo."],
+      "examples": ["/settitle PlayerName, 5"]
+    },
+    {
+      "command": "/addtutor",
+      "aliases": [],
+      "group": "god",
+      "syntax": ["/addtutor <playerName>"],
+      "params": [
+        {
+          "name": "playerName",
+          "required": true,
+          "type": "string",
+          "description": "Player precisa estar online."
+        }
+      ],
+      "effects": ["Promove ACCOUNT_TYPE_NORMAL para ACCOUNT_TYPE_TUTOR."],
+      "errors": [
+        "Player name param required",
+        "Player <name> is not online.",
+        "You can only promote a normal player to a tutor."
+      ],
+      "examples": ["/addtutor PlayerName"]
+    },
+    {
+      "command": "/removetutor",
+      "aliases": [],
+      "group": "god",
+      "syntax": ["/removetutor <playerName>"],
+      "params": [
+        {
+          "name": "playerName",
+          "required": true,
+          "type": "string",
+          "description": "Player precisa estar online."
+        }
+      ],
+      "effects": ["Rebaixa ACCOUNT_TYPE_TUTOR para ACCOUNT_TYPE_NORMAL."],
+      "errors": [
+        "Player name param required",
+        "Player <name> is not online.",
+        "You can only demote a tutor to a normal player"
+      ],
+      "examples": ["/removetutor PlayerName"]
+    },
+    {
+      "command": "/raid",
+      "aliases": [],
+      "group": "god",
+      "syntax": ["/raid <raidName>"],
+      "params": [
+        {
+          "name": "raidName",
+          "required": true,
+          "type": "string",
+          "description": "Nome deve existir em Raid.registry ou ser aceito por Game.startRaid."
+        }
+      ],
+      "effects": ["Tenta iniciar raid por nome."],
+      "examples": ["/raid morgaroth"]
+    },
+    {
+      "command": "/listraid",
+      "aliases": [],
+      "group": "god",
+      "syntax": ["/listraid"],
+      "params": [],
+      "effects": ["Lista raids registradas."],
+      "examples": ["/listraid"]
+    }
+  ],
+  "enums": {
+    "listplayers.mode": ["all"],
+    "addskill.skill_mapped": ["club", "sword", "axe", "dist", "shield", "fish"],
+    "addskill.type_prefix": ["l=level", "m=magic"],
+    "addmount.special": ["all"],
+    "setstorage.storageKey_type": ["integer_only"],
+    "tutor.account_transition": ["normal->tutor", "tutor->normal"],
+    "pos.accepted_formats": [
+      "x, y, z",
+      "Position(x, y, z)",
+      "{x = x, y = y, z = z}"
+    ]
+  }
+}
